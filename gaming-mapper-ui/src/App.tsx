@@ -115,49 +115,51 @@ export default function App() {
 
   return (
     <>
-      <Map
-        id="map-container"
-        initialViewState={{
-          latitude: 40.67,
-          longitude: -96.59,
-          zoom: 3,
-        }}
-        mapStyle="https://demotiles.maplibre.org/style.json"
-        onClick={onClick}
-        ref={mapRef}
-      >
-        <Source
-          id="gameData"
-          type="geojson"
-          data={gameData && "features" in gameData ? gameData : defaultLoc}
-          cluster={true}
-          clusterMaxZoom={14}
-          clusterRadius={50}
+      <div id="map-container" style={{ height: "100vh", width: "100%" }}>
+        <Map
+          id="map-container"
+          initialViewState={{
+            latitude: 40.67,
+            longitude: -96.59,
+            zoom: 3,
+          }}
+          mapStyle="https://demotiles.maplibre.org/style.json"
+          onClick={onClick}
+          ref={mapRef}
         >
-          <Layer
-            id="gameIcons"
-            type="symbol"
-            layout={{
-              "icon-image": "game-icon", // Use the added image
-              "icon-size": 0.1, // Adjust icon size
-              "icon-allow-overlap": true,
-            }}
-          />
-        </Source>
-
-        {/* Display popup if popupInfo state is set */}
-        {popupInfo && (
-          <Popup
-            longitude={popupInfo?.coordinates[0]}
-            latitude={popupInfo?.coordinates[1]}
-            closeButton={true}
-            closeOnClick={false}
-            anchor="bottom"
+          <Source
+            id="gameData"
+            type="geojson"
+            data={gameData && "features" in gameData ? gameData : defaultLoc}
+            cluster={true}
+            clusterMaxZoom={14}
+            clusterRadius={50}
           >
-            {popupInfo?.content}
-          </Popup>
-        )}
-      </Map>
+            <Layer
+              id="gameIcons"
+              type="symbol"
+              layout={{
+                "icon-image": "game-icon", // Use the added image
+                "icon-size": 0.1, // Adjust icon size
+                "icon-allow-overlap": true,
+              }}
+            />
+          </Source>
+
+          {/* Display popup if popupInfo state is set */}
+          {popupInfo && (
+            <Popup
+              longitude={popupInfo?.coordinates[0]}
+              latitude={popupInfo?.coordinates[1]}
+              closeButton={true}
+              closeOnClick={false}
+              anchor="bottom"
+            >
+              {popupInfo?.content}
+            </Popup>
+          )}
+        </Map>
+        </div>
     </>
   );
 }
