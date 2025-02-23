@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* html, body {
+  height: 100%;
+  margin: 0;
+} */
+
+#map-container {
+  width: 100%;
+  /* Full viewport height */
+  height: 100vh; 
+}

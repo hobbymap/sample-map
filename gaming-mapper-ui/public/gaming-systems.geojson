@@ -1,0 +1,260 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": 1,
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.006, 40.7128]
+      },
+      "properties": {
+        "gaming_system": "Magnavox Odyssey",
+        "game_name": "Table Tennis",
+        "release_date": "9/1/1972",
+        "release_location_city": "New York",
+        "author": "Ralph Baer",
+        "company": "Magnavox",
+        "icon": "game-icon"
+      }
+    },
+    {
+      "id": 2,
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-118.2437, 34.0522]
+      },
+      "properties": {
+        "gaming_system": "Atari 2600",
+        "game_name": "Space Invaders",
+        "release_date": "7/1/1980",
+        "release_location_city": "Los Angeles",
+        "author": "Tomohiro Nishikado",
+        "company": "Atari",
+        "icon": "game-icon"
+      }
+    },
+    {
+      "id": 3,
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [135.7681, 35.0116]
+      },
+      "properties": {
+        "gaming_system": "Nintendo Entertainment System",
+        "game_name": "Super Mario Bros.",
+        "release_date": "9/13/1985",
+        "release_location_city": "Kyoto",
+        "author": "Shigeru Miyamoto",
+        "company": "Nintendo",
+        "icon": "game-icon"
+      }
+    },
+    {
+      "id": 4,
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.759455, 35.682839]
+      },
+      "properties": {
+        "gaming_system": "Sega Master System",
+        "game_name": "Alex Kidd in Miracle World",
+        "release_date": "11/1/1986",
+        "release_location_city": "Tokyo",
+        "author": "Kotaro Hayashida",
+        "company": "Sega",
+        "icon": "game-icon"
+      }
+    },
+    {
+      "id": 5,
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.4194, 37.7749]
+      },
+      "properties": {
+        "gaming_system": "Commodore 64",
+        "game_name": "Maniac Mansion",
+        "release_date": "10/5/1987",
+        "release_location_city": "San Francisco",
+        "author": "Ron Gilbert",
+        "company": "Lucasfilm Games",
+        "icon": "game-icon"
+      }
+    },
+    {
+      "id": 6,
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [37.6173, 55.7558]
+      },
+      "properties": {
+        "gaming_system": "Game Boy",
+        "game_name": "Tetris",
+        "release_date": "6/14/1989",
+        "release_location_city": "Moscow",
+        "author": "Alexey Pajitnov",
+        "company": "Nintendo",
+        "icon": "game-icon"
+      }
+    },
+    {
+      "id": 7,
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.759455, 35.682839]
+      },
+      "properties": {
+        "gaming_system": "TurboGrafx-16",
+        "game_name": "Bonk's Adventure",
+        "release_date": "12/15/1989",
+        "release_location_city": "Tokyo",
+        "author": "Shinichi Nakamoto",
+        "company": "Hudson Soft",
+        "icon": "game-icon"
+      }
+    },
+    {
+      "id": 8,
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [135.7681, 35.0116]
+      },
+      "properties": {
+        "gaming_system": "Super Nintendo Entertainment System",
+        "game_name": "The Legend of Zelda: A Link to the Past",
+        "release_date": "11/21/1991",
+        "release_location_city": "Kyoto",
+        "author": "Shigeru Miyamoto",
+        "company": "Nintendo",
+        "icon": "game-icon"
+      }
+    },
+    {
+      "id": 9,
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.6917, 35.6895]
+      },
+      "properties": {
+        "gaming_system": "Sega Genesis",
+        "game_name": "Sonic the Hedgehog",
+        "release_date": "6/23/1991",
+        "release_location_city": "Tokyo",
+        "author": "Yuji Naka",
+        "company": "Sega",
+        "icon": "game-icon"
+      }
+    },
+    {
+      "id": 10,
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.006, 40.7128]
+      },
+      "properties": {
+        "gaming_system": "PlayStation 2",
+        "game_name": "Grand Theft Auto: San Andreas",
+        "release_date": "10/26/2004",
+        "release_location_city": "New York City, NY",
+        "author": "Sam Houser",
+        "company": "Rockstar Games",
+        "icon": "game-icon"
+      }
+    },
+    {
+      "id": 11,
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.1215, 47.674]
+      },
+      "properties": {
+        "gaming_system": "Xbox",
+        "game_name": "Halo: Combat Evolved",
+        "release_date": "11/15/2001",
+        "release_location_city": "Redmond, WA",
+        "author": "Bungie",
+        "company": "Microsoft",
+        "icon": "game-icon"
+      }
+    },
+    {
+      "id": 12,
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-97.7431, 30.2672]
+      },
+      "properties": {
+        "gaming_system": "GameCube",
+        "game_name": "Metroid Prime",
+        "release_date": "11/17/2002",
+        "release_location_city": "Austin, TX",
+        "author": "Retro Studios",
+        "company": "Nintendo",
+        "icon": "game-icon"
+      }
+    },
+    {
+      "id": 13,
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.0122, 52.2298]
+      },
+      "properties": {
+        "gaming_system": "PC",
+        "game_name": "Cyberpunk 2077",
+        "release_date": "12/10/2020",
+        "release_location_city": "Warsaw",
+        "author": "Adam Badowski",
+        "company": "CD Projekt Red",
+        "icon": "game-icon"
+      }
+    },
+    {
+      "id": 14,
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [135.7681, 35.0116]
+      },
+      "properties": {
+        "gaming_system": "Nintendo Switch",
+        "game_name": "Animal Crossing: New Horizons",
+        "release_date": "3/20/2020",
+        "release_location_city": "Kyoto",
+        "author": "Aya Kyogoku",
+        "company": "Nintendo",
+        "icon": "game-icon"
+      }
+    },
+    {
+      "id": 15,
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [3.7174, 51.0543]
+      },
+      "properties": {
+        "gaming_system": "PC",
+        "game_name": "Baldur's Gate 3",
+        "release_date": "8/3/2023",
+        "release_location_city": "Ghent",
+        "author": "Swen Vincke",
+        "company": "Larian Studios",
+        "icon": "game-icon"
+      }
+    }
+  ]
+}
