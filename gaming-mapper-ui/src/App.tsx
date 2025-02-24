@@ -1,71 +1,80 @@
 import { useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { Map, MapRef, Source, Layer, MapMouseEvent, Popup } from "@vis.gl/react-maplibre";
-import { GeoJSON, Geometry, GeoJsonProperties } from "geojson";
+import { FeatureCollection, Feature, GeoJSON, Geometry, GeoJsonProperties } from "geojson";
 
 export default function App() {
-  const mapRef = useRef<MapRef>(null); // mapRef might be null initially
-  const [popupInfo, setPopupInfo] = useState<{ content: any; coordinates: any } | null>(null); // State to store popup content
+  const mapRef = useRef<MapRef>(null);
+  const [popupInfo, setPopupInfo] = useState<{ content: any; coordinates: any } | null>(null);
 
-  // Default GeoJSON for testing
   const defaultLoc: GeoJSON = {
     type: "FeatureCollection",
     features: [
       {
-        id: 1,
+        id: 99,
         type: "Feature",
         geometry: {
           type: "Point",
           coordinates: [-74.006, 40.7128],
         },
         properties: {
+          id: 99,
           gaming_system: "Magnavox Odyssey",
           game_name: "Table Tennis",
           release_date: "9/1/1972",
           release_location_city: "New York",
           author: "Ralph Baer",
           company: "Magnavox",
-          icon: "game-icon", // Use the same icon for all points
+          icon_url: "/icons/console.png",
+          icon_name: "magnavox"
         },
       },
     ],
   };
 
-  const [gameData, setGameData] = useState<GeoJSON<Geometry, GeoJsonProperties>>();
+  const [gameData, setGameData] = useState<FeatureCollection>();
 
-  // Fetch JSON from public folder
   useEffect(() => {
-    fetch("/gaming-systems.geojson") // Path relative to public/
+    fetch("/gaming-systems.geojson")
       .then((response) => response.json())
       .then((data) => setGameData(data))
       .catch((error) => console.error("Error loading JSON:", error));
   }, []);
 
-  // Load image for the icon once map is loaded
   useEffect(() => {
-    if (mapRef.current) {
-      mapRef.current.on("load", async () => {
-        // Check if the image already exists before adding
-        if (!mapRef?.current?.hasImage("game-icon")) {
-          const _image: any = await mapRef.current?.loadImage("/icons/console.png");
-          if (_image) {
-            mapRef.current?.addImage("game-icon", _image?.data); // Add the icon once to the map
+    if (gameData && mapRef.current) {
+      const map = mapRef.current;
+  
+      const loadImages = async () => {
+        for (const feature of gameData.features) {
+          if (feature.properties?.icon_url && feature.properties?.icon_name) {
+            const imageId = `${feature.properties.icon_name}`; // Use icon_name
+            
+            if (!map.hasImage(imageId)) {
+              try {
+                const _image: any = await map.loadImage(feature.properties.icon_url);
+                if (_image) {
+                  map.addImage(imageId, _image.data);
+                }
+              } catch (error) {
+                console.error(`Failed to load image ${feature.properties.icon_url}:`, error);
+              }
+            }
           }
         }
-      });
+      };
+  
+      loadImages(); // Run async function
     }
   }, [gameData]);
 
-  // Handle click event on the map
   const onClick = (event: MapMouseEvent) => {
     if (mapRef.current) {
-      // Query features at the clicked point
       const features = mapRef.current.queryRenderedFeatures(event.point);
 
       if (features.length > 0) {
-        const feature: any = features[0]; // Get the clicked feature
+        const feature: any = features[0];
         if (feature) {
-          // Handle the case if the clicked feature is a cluster
           if (feature.properties.cluster) {
             const clusterId = feature.properties.cluster_id;
             const geojsonSource: any = mapRef.current?.getSource("gameData");
@@ -79,18 +88,9 @@ export default function App() {
               });
             }
           } else {
-            // Handle the case for individual points (non-clustered)
-            const {
-              gaming_system,
-              game_name,
-              release_date,
-              release_location_city,
-              author,
-              company,
-            } = feature.properties;
+            const { gaming_system, game_name, release_date, release_location_city, author, company } = feature.properties;
             const coordinates = feature.geometry?.coordinates;
 
-            // Set the popup content
             const popupContent = (
               <div>
                 <h3>{game_name}</h3>
@@ -102,7 +102,6 @@ export default function App() {
               </div>
             );
 
-            // Set the popup state and position
             setPopupInfo({
               content: popupContent,
               coordinates,
@@ -139,14 +138,13 @@ export default function App() {
               id="gameIcons"
               type="symbol"
               layout={{
-                "icon-image": "game-icon", // Use the added image
-                "icon-size": 0.1, // Adjust icon size
+                "icon-image": ["get", "icon_name"], 
+                "icon-size": 0.1,
                 "icon-allow-overlap": true,
               }}
             />
           </Source>
 
-          {/* Display popup if popupInfo state is set */}
           {popupInfo && (
             <Popup
               longitude={popupInfo?.coordinates[0]}
@@ -159,7 +157,7 @@ export default function App() {
             </Popup>
           )}
         </Map>
-        </div>
+      </div>
     </>
   );
 }

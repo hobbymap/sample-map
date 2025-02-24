@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="200" height="150">
+  <!-- Console Body -->
+  <rect x="10" y="30" width="180" height="90" rx="20" ry="20" fill="#3B3B3B" stroke="#6A6A6A" stroke-width="5"/>
+
+  <!-- Console Wood Effect -->
+  <rect x="10" y="30" width="180" height="15" fill="#8B5C3D"/>
+
+  <!-- Control Ports -->
+  <circle cx="40" cy="110" r="6" fill="#B2B2B2"/>
+  <circle cx="70" cy="110" r="6" fill="#B2B2B2"/>
+  <circle cx="100" cy="110" r="6" fill="#B2B2B2"/>
+  <circle cx="130" cy="110" r="6" fill="#B2B2B2"/>
+
+  <!-- Button Details -->
+  <circle cx="30" cy="55" r="8" fill="#E63946"/>
+  <circle cx="30" cy="75" r="8" fill="#E63946"/>
+  <circle cx="170" cy="55" r="8" fill="#E63946"/>
+  <circle cx="170" cy="75" r="8" fill="#E63946"/>
+  
+  <!-- Atari Logo -->
+  <text x="65" y="40" font-family="Arial" font-size="16" fill="#F1FAEE">Atari 2600</text>
+  
+  <!-- Stylized Base -->
+  <rect x="60" y="120" width="80" height="15" fill="#8B5C3D"/>
+</svg>
