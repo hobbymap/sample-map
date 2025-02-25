@@ -1,0 +1,142 @@
+import { JSX, useEffect, useState } from "react";
+import { createRoot } from "react-dom/client";
+import { MapContainer, TileLayer, Marker, Popup, useMapEvent } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import L from "leaflet";
+import { FeatureCollection, Feature, GeoJSON, Geometry, GeoJsonProperties } from "geojson";
+import MarkerClusterGroup from "react-leaflet-markercluster";
+
+export default function App() {
+  const [gameData, setGameData] = useState<FeatureCollection | null>(null);
+  const [popupInfo, setPopupInfo] = useState<{ content: JSX.Element; coordinates: [number, number] } | null>(null);
+
+  const defaultLoc: FeatureCollection = {
+    type: "FeatureCollection",
+    features: [
+      {
+        id: 99,
+        type: "Feature",
+        geometry: {
+          type: "Point",
+          coordinates: [-74.006, 40.7128], // [longitude, latitude]
+        },
+        properties: {
+          id: 99,
+          gaming_system: "Magnavox Odyssey",
+          game_name: "Table Tennis",
+          release_date: "9/1/1972",
+          release_location_city: "New York",
+          author: "Ralph Baer",
+          company: "Magnavox",
+          icon_url: "/icons/console.png",
+          icon_name: "magnavox",
+          icon_attribution: "",
+        },
+      },
+    ],
+  };
+
+  useEffect(() => {
+    fetch("/gaming-systems.geojson")
+      .then((response) => response.json())
+      .then((data) => setGameData(data))
+      .catch((error) => console.error("Error loading JSON:", error));
+  }, []);
+
+  function MapClickHandler() {
+    useMapEvent("click", () => {
+      setPopupInfo(null); // Close popup when clicking outside markers
+    });
+    return null;
+  }
+
+  return (
+    <div id="map-container" style={{ height: "100vh", width: "100%" }}>
+      <MapContainer center={[40.67, -96.59]} zoom={3} style={{ height: "100%", width: "100%" }}>
+        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+        <MapClickHandler />
+
+        {/* Render Markers from GeoJSON Data */}
+        {/* {gameData?.features
+          ? 
+          gameData.features.map((feature: any) => {
+              const coordinates = feature.geometry?.coordinates;
+              const { gaming_system, game_name, release_date, release_location_city, author, company, icon_url } =
+                feature.properties || {};
+
+              const customIcon: any = L.icon({
+                iconUrl: icon_url || "/icons/console.png", // Use provided icon or fallback
+                iconSize: [32, 32], // Adjust size as needed
+                iconAnchor: [16, 32],
+                popupAnchor: [0, -32],
+              });
+
+              return (
+                <Marker
+                  key={feature.id}
+                  position={[coordinates[1], coordinates[0]]} // Leaflet uses [lat, lng]
+                  icon={customIcon}
+                  eventHandlers={{
+                    click: () =>
+                      setPopupInfo({
+                        content: (
+                          <div>
+                            <h3>{game_name}</h3>
+                            <p><strong>System:</strong> {gaming_system}</p>
+                            <p><strong>Author:</strong> {author}</p>
+                            <p><strong>Release Date:</strong> {release_date}</p>
+                            <p><strong>Location:</strong> {release_location_city}</p>
+                            <p><strong>Company:</strong> {company}</p>
+                          </div>
+                        ),
+                        coordinates: [coordinates[1], coordinates[0]],
+                      }),
+                  }}
+                />
+              );
+            })
+            : null} */}
+              return (
+                  <MarkerClusterGroup>
+                        {gameData?.features.map((feature: any) => (
+                        <Marker 
+                          key={feature.id} 
+                          position={new L.LatLng(feature.geometry.coordinates[1],feature.geometry.coordinates[0])}
+                          icon={L.icon({
+                            iconUrl: feature.properties.icon_url || "/icons/console.png", // Use provided icon or fallback
+                            iconSize: [32, 32], // Adjust size as needed
+                            iconAnchor: [16, 32],
+                            popupAnchor: [0, -32],
+                          })} 
+                        >
+                          <Popup>
+                            <h3>{feature.properties.game_name}</h3>
+                            <p><strong>System:</strong> {feature.properties.gaming_system}</p>
+                            <p><strong>Author:</strong> {feature.properties.author}</p>
+                            <p><strong>Release Date:</strong> {feature.properties.release_date}</p>
+                            <p><strong>Location:</strong> {feature.properties.release_location_city}</p>
+                            <p><strong>Company:</strong> {feature.properties.company}</p>
+                          </Popup>
+                        </Marker>
+                      ))}
+                  </MarkerClusterGroup>
+              )
+
+        {/* Display Popup */}
+        {/* {popupInfo && (
+          <Popup 
+            position={popupInfo.coordinates} 
+            closeButton={true}
+            closeOnEscapeKey={true}
+          >
+            {popupInfo.content}
+          </Popup>
+        )} */}
+      </MapContainer>
+    </div>
+  );
+}
+
+export function renderToDom(container: HTMLElement) {
+  createRoot(container).render(<App />);
+}

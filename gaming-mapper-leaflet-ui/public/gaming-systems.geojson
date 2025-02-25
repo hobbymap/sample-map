@@ -1,0 +1,581 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+ {
+   "id": 1,
+   "type": "Feature",
+   "geometry": {
+      "type": "Point",
+      "coordinates":  [-74.006,40.7128]
+   },
+   "properties": {
+     "id": 1,
+     "gaming_system":"Magnavox Odyssey",
+     "game_name":"Table Tennis",
+     "release_date":"9/1/1972",
+     "release_location_city":"New York",
+     "author":"Ralph Baer",
+     "company":"Magnavox",
+     "icon_url":"/icons/magnavox.png",
+     "icon_name": "magnavox",
+     "icon_attribution_url": "https://www.freepik.com/search#uuid=3af83582-1733-4740-86f7-1985ee0be008",
+     "icon_attribution_title": "Icon by UIcons",
+     "details": "The Magnavox Odyssey was the world's first commercial home video game console.",
+     "details_url": "https://en.wikipedia.org/wiki/Magnavox_Odyssey",
+     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Magnavox-Odyssey-Console-Set.jpg/220px-Magnavox-Odyssey-Console-Set.jpg"
+   }
+ },
+ {
+   "id": 2,
+   "type": "Feature",
+   "geometry": {
+      "type": "Point",
+      "coordinates":  [-118.2437,34.0522]
+   },
+   "properties": {
+     "id": 2,
+     "gaming_system":"Atari 2600",
+     "game_name":"Space Invaders",
+     "release_date":"7/1/1980",
+     "release_location_city":"Los Angeles",
+     "author":"Tomohiro Nishikado",
+     "company":"Atari",
+     "icon_url":"/icons/atari.png",
+     "icon_name": "atari",
+     "icon_attribution_url": "https://www.freepik.com/search",
+     "icon_attribution_title": "Icon by UIcons",
+     "details": "The Atari 2600 was one of the first gaming consoles to use interchangeable cartridges.",
+     "details_url": "https://en.wikipedia.org/wiki/Atari_2600",
+     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Atari-2600-Wood-4Sw-Set.png/1920px-Atari-2600-Wood-4Sw-Set.png"
+   }
+ },
+ {
+   "id": 3,
+   "type": "Feature",
+   "geometry": {
+      "type": "Point",
+      "coordinates":  [135.7681,35.0116]
+   },
+   "properties": {
+     "id": 3,
+     "gaming_system":"Nintendo Entertainment System",
+     "game_name":"Super Mario Bros.",
+     "release_date":"9/13/1985",
+     "release_location_city":"Kyoto",
+     "author":"Shigeru Miyamoto",
+     "company":"Nintendo",
+     "icon_url":"/icons/nes.png",
+     "icon_name": "nes",
+     "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
+     "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
+     "details": "The NES revitalized the gaming industry and introduced iconic franchises.",
+     "details_url": "https://en.wikipedia.org/wiki/Nintendo_Entertainment_System",
+     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/NES-Console-Set.png/220px-NES-Console-Set.png"
+   }
+ },
+ {
+   "id": 4,
+   "type": "Feature",
+   "geometry": {
+      "type": "Point",
+      "coordinates":  [139.6917,35.6895]
+   },
+   "properties": {
+     "id": 4,
+     "gaming_system":"Sony PlayStation",
+     "game_name":"Final Fantasy VII",
+     "release_date":"1/31/1997",
+     "release_location_city":"Tokyo",
+     "author":"Hironobu Sakaguchi",
+     "company":"Sony",
+     "icon_url":"/icons/playstation.png",
+     "icon_name": "playstation",
+     "icon_attribution_url": "https://www.flaticon.com/free-icons/controller",
+     "icon_attribution_title": "Controller icons created by Freepik - Flaticon",
+     "details": "The PlayStation introduced 3D gaming to the mainstream.",
+     "details_url": "https://en.wikipedia.org/wiki/PlayStation_(console)",
+     "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/PlayStation-SCPH-1000-with-Controller.png/250px-PlayStation-SCPH-1000-with-Controller.png"
+   }
+ },
+ {
+   "id": 5,
+   "type": "Feature",
+   "geometry": {
+      "type": "Point",
+      "coordinates":  [-122.3321,47.6062]
+   },
+   "properties": {
+     "id": 5,
+     "gaming_system":"Xbox",
+     "game_name":"Halo: Combat Evolved",
+     "release_date":"11/15/2001",
+     "release_location_city":"Seattle",
+     "author":"Bungie",
+     "company":"Microsoft",
+     "icon_url":"/icons/xbox.png",
+     "icon_name": "xbox",
+     "icon_attribution_url": "https://www.flaticon.com/free-icons/gamepad",
+     "icon_attribution_title": "Gamepad icons created by Smashicons - Flaticon",
+     "details": "The Xbox brought online console gaming to prominence.",
+     "details_url": "https://en.wikipedia.org/wiki/Xbox_(console)",
+     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Xbox-Console-wDuke-L.jpg/250px-Xbox-Console-wDuke-L.jpg"
+   }
+  },
+  {
+    "id": 6,
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [37.6173,55.7558]
+    },
+    "properties": {
+      "id": 6,
+      "gaming_system":"Game Boy",
+      "game_name":"Tetris",
+      "release_date":"6/14/1989",
+      "release_location_city":"Moscow",
+      "author":"Alexey Pajitnov",
+      "company":"Nintendo",
+      "icon_url":"/icons/gameboy.png",
+      "icon_name": "game-boy",
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
+      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
+      "details": "The hand-held gaming console became a cultural icon.",
+      "details_url": "https://en.wikipedia.org/wiki/Game_Boy",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Game-Boy-FL.png/220px-Game-Boy-FL.png"
+    }
+  },
+  {
+    "id": 7,
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [139.759455,35.682839]
+    },
+    "properties": {
+      "id": 7,
+      "gaming_system":"TurboGrafx-16",
+      "game_name":"Bonk's Adventure",
+      "release_date":"12/15/1989",
+      "release_location_city":"Tokyo",
+      "author":"Shinichi Nakamoto",
+      "company":"Hudson Soft",
+      "icon_url":"/icons/turbografix.png",
+      "icon_name": "turbografix",
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/gaming",
+      "icon_attribution_title": "Gaming icons created by POD Gladiator - Flaticon",
+      "details": "Also known as the PC Engine, it used a 16-bit graphics processing unit (GPU) chipset. It was considered the smallest home game console.",
+      "details_url": "https://en.wikipedia.org/wiki/TurboGrafx-16",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/TurboGrafx16-Console-Set.jpg/250px-TurboGrafx16-Console-Set.jpg"
+    }
+  },
+  {
+    "id": 8,
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [135.7681,35.0116]
+    },
+    "properties": {
+      "id": 8,
+      "gaming_system":"Super Nintendo Entertainment System",
+      "game_name":"The Legend of Zelda: A Link to the Past",
+      "release_date":"11/21/1991",
+      "release_location_city":"Kyoto",
+      "author":"Shigeru Miyamoto",
+      "company":"Nintendo",
+      "icon_url":"/icons/console.png",
+      "icon_name": "snes",
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
+      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
+      "details": "",
+      "details_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/SNES-Mod1-Console-Set.png"
+    }
+  },
+  {
+    "id": 9,
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [139.6917,35.6895]
+    },
+    "properties": {
+      "id": 9,
+      "gaming_system":"Sega Genesis",
+      "game_name":"Sonic the Hedgehog",
+      "release_date":"6/23/1991",
+      "release_location_city":"Tokyo",
+      "author":"Yuji Naka",
+      "company":"Sega",
+      "icon_url":"/icons/console.png",
+      "icon_name": "sega-genesis",
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
+      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
+      "details": "",
+      "details_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Sega-Genesis-Mk2-6button.png"
+    }
+  },
+  {
+    "id": 10,
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [139.6917,35.6895]
+    },
+    "properties": {
+      "id": 10,
+      "gaming_system":"PlayStation",
+      "game_name":"Final Fantasy VII",
+      "release_date":"1/31/1997",
+      "release_location_city":"Tokyo",
+      "author":"Hironobu Sakaguchi",
+      "company":"Square Enix",
+      "icon_url":"/icons/console.png",
+      "icon_name": "playstation",
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
+      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
+      "details": "",
+      "details_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/PSX-Console-wController.png"
+    }
+  },
+  {
+    "id": 11,
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [135.7681,35.0116]
+    },
+    "properties": {
+      "id": 11,
+      "gaming_system":"Nintendo 64",
+      "game_name":"Super Mario 64",
+      "release_date":"6/23/1996",
+      "release_location_city":"Kyoto",
+      "author":"Shigeru Miyamoto",
+      "company":"Nintendo",
+      "icon_url":"/icons/console.png",
+      "icon_name": "nes64",
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
+      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
+      "details": "",
+      "details_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/N64-Console-Set.png"
+    }
+  },
+  {
+    "id": 12,
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-74.006,40.7128]
+    },
+    "properties": {
+      "id": 12,
+      "gaming_system":"PlayStation 2",
+      "game_name":"Grand Theft Auto: San Andreas",
+      "release_date":"10/26/2004",
+      "release_location_city":"New York City, NY",
+      "author":"Sam Houser",
+      "company":"Rockstar Games",
+      "icon_url":"/icons/console.png",
+      "icon_name": "ps2",
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
+      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
+      "details": "",
+      "details_url": "",
+      "image_url": ""
+    }
+  },
+  {
+    "id": 13,
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-122.1215,47.674]
+    },
+    "properties": {
+      "id": 13,
+      "gaming_system":"Xbox",
+      "game_name":"Halo: Combat Evolved",
+      "release_date":"11/15/2001",
+      "release_location_city":"Redmond, WA",
+      "author":"Bungie",
+      "company":"Microsoft",
+      "icon_url":"/icons/console.png",
+      "icon_name": "xbox",
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
+      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
+      "details": "",
+      "details_url": "",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Xbox-console.jpg"
+    }
+  },
+  {
+    "id": 14,
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-97.7431,30.2672]
+    },
+    "properties": {
+      "id": 14,
+      "gaming_system":"GameCube",
+      "game_name":"Metroid Prime",
+      "release_date":"11/17/2002",
+      "release_location_city":"Austin, TX",
+      "author":"Retro Studios",
+      "company":"Nintendo",
+      "icon_url":"/icons/console.png",
+      "icon_name": "gamecube",
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
+      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
+      "details": "",
+      "details_url": "",
+      "image_url": ""
+    }
+  },
+  {
+    "id": 15,
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-118.4912,34.0195]
+    },
+    "properties": {
+      "id": 15,
+      "gaming_system":"PlayStation 3",
+      "game_name":"Uncharted: Drake's Fortune",
+      "release_date":"11/19/2007",
+      "release_location_city":"Santa Monica, CA",
+      "author":"Naughty Dog",
+      "company":"Sony Computer Entertainment",
+      "icon_url":"/icons/console.png",
+      "icon_name": "ps3",
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
+      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
+      "details": "",
+      "details_url": "",
+      "image_url": ""
+    }
+  },
+  {
+    "id": 16,
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-78.7811,35.7915]
+    },
+    "properties": {
+      "id": 16,
+      "gaming_system":"Xbox 360",
+      "game_name":"Gears of War",
+      "release_date":"11/7/2006",
+      "release_location_city":"Cary, NC",
+      "author":"Cliff Bleszinski",
+      "company":"Epic Games",
+      "icon_url":"/icons/console.png",
+      "icon_name": "xbox360",
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
+      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
+      "details": "",
+      "details_url": "",
+      "image_url": ""
+    }
+  },
+  {
+    "id": 17,
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [135.7681,35.0116]
+    },
+    "properties": {
+      "id": 17,
+      "gaming_system":"Nintendo Wii",
+      "game_name":"Super Mario Galaxy",
+      "release_date":"11/1/2007",
+      "release_location_city":"Kyoto",
+      "author":"Shigeru Miyamoto",
+      "company":"Nintendo",
+      "icon_url":"/icons/console.png",
+      "icon_name": "neswii",
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
+      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
+      "details": "",
+      "details_url": "",
+      "image_url": ""
+    }
+  },
+  {
+    "id": 18,
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-118.4912,34.0195]
+    },
+    "properties": {
+      "id": 18,
+      "gaming_system":"PlayStation 4",
+      "game_name":"The Last of Us Part II",
+      "release_date":"6/19/2020",
+      "release_location_city":"Santa Monica, CA",
+      "author":"Neil Druckmann",
+      "company":"Naughty Dog",
+      "icon_url":"/icons/console.png",
+      "icon_name": "ps4",
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
+      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
+      "details": "",
+      "details_url": "",
+      "image_url": ""
+    }
+  },
+  {
+    "id": 19,
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-122.1215,47.674]
+    },
+    "properties": {
+      "id": 19,
+      "gaming_system":"Xbox One",
+      "game_name":"Halo 5: Guardians",
+      "release_date":"10/27/2015",
+      "release_location_city":"Redmond, WA",
+      "author":"Tim Longo",
+      "company":"343 Industries",
+      "icon_url":"/icons/console.png",
+      "icon_name": "xboxone",
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
+      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
+      "details": "",
+      "details_url": "",
+      "image_url": ""
+    }
+  },
+  {
+    "id": 20,
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [135.7681,35.0116]
+    },
+    "properties": {
+      "id": 20,
+      "gaming_system":"Nintendo Switch",
+      "game_name":"The Legend of Zelda: Breath of the Wild",
+      "release_date":"3/3/2017",
+      "release_location_city":"Kyoto",
+      "author":"Hidemaro Fujibayashi",
+      "company":"Nintendo",
+      "icon_url":"/icons/switch.png",
+      "icon_name": "nes-switch",
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/handheld-console",
+      "icon_attribution_title": "Handheld console icons created by Freepik - Flaticon",
+      "details": "",
+      "details_url": "",
+      "image_url": ""
+    }
+  },
+  {
+    "id": 21,
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-118.4912,34.0195]
+    },
+    "properties": {
+      "id": 21,
+      "gaming_system":"PlayStation 5",
+      "game_name":"God of War Ragnarök",
+      "release_date":"11/9/2022",
+      "release_location_city":"Santa Monica, CA",
+      "author":"Eric Williams",
+      "company":"Santa Monica Studio",
+      "icon_url":"/icons/console.png",
+      "icon_name": "ps5",
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
+      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
+      "details": "",
+      "details_url": "",
+      "image_url": ""
+    }
+  },
+  {
+    "id": 22,
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [-1.52,52.2852]
+    },
+    "properties": {
+      "id": 22,
+      "gaming_system":"Xbox Series X",
+      "game_name":"Forza Horizon 5",
+      "release_date":"11/9/2021",
+      "release_location_city":"Leamington Spa",
+      "author":"Mike Brown",
+      "company":"Playground Games",
+      "icon_url":"/icons/console.png",
+      "icon_name": "xbox-series-x",
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
+      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
+      "details": "",
+      "details_url": "",
+      "image_url": ""
+    }
+  },
+  {
+    "id": 23,
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [21.0122,52.2298]
+    },
+    "properties": {
+      "id": 23,
+      "gaming_system":"PC",
+      "game_name":"Cyberpunk 2077",
+      "release_date":"12/10/2020",
+      "release_location_city":"Warsaw",
+      "author":"Adam Badowski",
+      "company":"CD Projekt Red",
+      "icon_url":"/icons/console.png",
+      "icon_name": "pc",
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
+      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
+      "details": "",
+      "details_url": "",
+      "image_url": ""
+    }
+  },
+  {
+    "id": 24,
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [135.7681,35.0116]
+    },
+    "properties": {
+      "id": 24,
+      "gaming_system":"Nintendo Switch",
+      "game_name":"Animal Crossing: New Horizons",
+      "release_date":"3/20/2020",
+      "release_location_city":"Kyoto",
+      "author":"Aya Kyogoku",
+      "company":"Nintendo",
+      "icon_url":"/icons/console.png",
+      "icon_name": "nes-switch",
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
+      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
+      "details": "",
+      "details_url": "",
+      "image_url": ""
+    }
+  }
+]
+}

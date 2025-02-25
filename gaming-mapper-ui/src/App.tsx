@@ -26,7 +26,8 @@ export default function App() {
           author: "Ralph Baer",
           company: "Magnavox",
           icon_url: "/icons/console.png",
-          icon_name: "magnavox"
+          icon_name: "magnavox",
+          icon_attribution: ""
         },
       },
     ],
@@ -53,7 +54,7 @@ export default function App() {
             if (!map.hasImage(imageId)) {
               try {
                 const _image: any = await map.loadImage(feature.properties.icon_url);
-                if (_image) {
+                if (_image?.data) {
                   map.addImage(imageId, _image.data);
                 }
               } catch (error) {

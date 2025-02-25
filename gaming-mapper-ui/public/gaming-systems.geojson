@@ -16,8 +16,9 @@
       "release_location_city":"New York",
       "author":"Ralph Baer",
       "company":"Magnavox",
-      "icon_url":"/icons/magnavox.svg",
-      "icon_name": "magnavox"
+      "icon_url":"/icons/magnavox.png",
+      "icon_name": "magnavox",
+      "icon_attribution": "<a href='https://www.freepik.com/search#uuid=3af83582-1733-4740-86f7-1985ee0be008'>Icon by UIcons</a>"
     }
   },
   {
@@ -35,8 +36,9 @@
       "release_location_city":"Los Angeles",
       "author":"Tomohiro Nishikado",
       "company":"Atari",
-      "icon_url":"/icons/atari2600.svg",
-      "icon_name": "atari"
+      "icon_url":"/icons/atari.png",
+      "icon_name": "atari",
+      "icon_attribution": "<a href='https://www.freepik.com/search'>Icon by UIcons</a>"
     }
   },
   {
@@ -54,8 +56,9 @@
       "release_location_city":"Kyoto",
       "author":"Shigeru Miyamoto",
       "company":"Nintendo",
-      "icon_url":"/icons/nes.svg",
-      "icon_name": "nes"
+      "icon_url":"/icons/nes.png",
+      "icon_name": "nes",
+      "icon_attribution": ""
     }
   },
   {
@@ -74,7 +77,8 @@
       "author":"Kotaro Hayashida",
       "company":"Sega",
       "icon_url":"/icons/console.png",
-      "icon_name": "sega"
+      "icon_name": "sega",
+      "icon_attribution": ""
     }
   },
   {
@@ -93,7 +97,8 @@
       "author":"Ron Gilbert",
       "company":"Lucasfilm Games",
       "icon_url":"/icons/console.png",
-      "icon_name": "commodore"
+      "icon_name": "commodore",
+      "icon_attribution": ""
     }
   },
   {
@@ -112,7 +117,8 @@
       "author":"Alexey Pajitnov",
       "company":"Nintendo",
       "icon_url":"/icons/console.png",
-      "icon_name": "game-boy"
+      "icon_name": "game-boy",
+      "icon_attribution": ""
     }
   },
   {
@@ -131,7 +137,8 @@
       "author":"Shinichi Nakamoto",
       "company":"Hudson Soft",
       "icon_url":"/icons/console.png",
-      "icon_name": "turbografix"
+      "icon_name": "turbografix",
+      "icon_attribution": ""
     }
   },
   {
@@ -150,7 +157,8 @@
       "author":"Shigeru Miyamoto",
       "company":"Nintendo",
       "icon_url":"/icons/console.png",
-      "icon_name": "snes"
+      "icon_name": "snes",
+      "icon_attribution": ""
     }
   },
   {
@@ -169,7 +177,8 @@
       "author":"Yuji Naka",
       "company":"Sega",
       "icon_url":"/icons/console.png",
-      "icon_name": "sega-genesis"
+      "icon_name": "sega-genesis",
+      "icon_attribution": ""
     }
   },
   {
@@ -188,7 +197,8 @@
       "author":"Hironobu Sakaguchi",
       "company":"Square Enix",
       "icon_url":"/icons/console.png",
-      "icon_name": "playstation"
+      "icon_name": "playstation",
+      "icon_attribution": ""
     }
   },
   {
@@ -207,7 +217,8 @@
       "author":"Shigeru Miyamoto",
       "company":"Nintendo",
       "icon_url":"/icons/console.png",
-      "icon_name": "nes64"
+      "icon_name": "nes64",
+      "icon_attribution": ""
     }
   },
   {
@@ -226,7 +237,8 @@
       "author":"Sam Houser",
       "company":"Rockstar Games",
       "icon_url":"/icons/console.png",
-      "icon_name": "ps2"
+      "icon_name": "ps2",
+      "icon_attribution": ""
     }
   },
   {
@@ -245,7 +257,8 @@
       "author":"Bungie",
       "company":"Microsoft",
       "icon_url":"/icons/console.png",
-      "icon_name": "xbox"
+      "icon_name": "xbox",
+      "icon_attribution": ""
     }
   },
   {
@@ -264,7 +277,8 @@
       "author":"Retro Studios",
       "company":"Nintendo",
       "icon_url":"/icons/console.png",
-      "icon_name": "gamecube"
+      "icon_name": "gamecube",
+      "icon_attribution": ""
     }
   },
   {
@@ -283,7 +297,8 @@
       "author":"Naughty Dog",
       "company":"Sony Computer Entertainment",
       "icon_url":"/icons/console.png",
-      "icon_name": "ps3"
+      "icon_name": "ps3",
+      "icon_attribution": ""
     }
   },
   {
@@ -302,7 +317,8 @@
       "author":"Cliff Bleszinski",
       "company":"Epic Games",
       "icon_url":"/icons/console.png",
-      "icon_name": "xbox360"
+      "icon_name": "xbox360",
+      "icon_attribution": ""
     }
   },
   {
@@ -321,7 +337,8 @@
       "author":"Shigeru Miyamoto",
       "company":"Nintendo",
       "icon_url":"/icons/console.png",
-      "icon_name": "neswii"
+      "icon_name": "neswii",
+      "icon_attribution": ""
     }
   },
   {
@@ -340,7 +357,8 @@
       "author":"Neil Druckmann",
       "company":"Naughty Dog",
       "icon_url":"/icons/console.png",
-      "icon_name": "ps4"
+      "icon_name": "ps4",
+      "icon_attribution": ""
     }
   },
   {
@@ -359,7 +377,8 @@
       "author":"Tim Longo",
       "company":"343 Industries",
       "icon_url":"/icons/console.png",
-      "icon_name": "xboxone"
+      "icon_name": "xboxone",
+      "icon_attribution": ""
     }
   },
   {
@@ -378,7 +397,8 @@
       "author":"Hidemaro Fujibayashi",
       "company":"Nintendo",
       "icon_url":"/icons/console.png",
-      "icon_name": "nes-switch"
+      "icon_name": "nes-switch",
+      "icon_attribution": ""
     }
   },
   {
@@ -397,7 +417,8 @@
       "author":"Eric Williams",
       "company":"Santa Monica Studio",
       "icon_url":"/icons/console.png",
-      "icon_name": "ps5"
+      "icon_name": "ps5",
+      "icon_attribution": ""
     }
   },
   {
@@ -416,7 +437,8 @@
       "author":"Mike Brown",
       "company":"Playground Games",
       "icon_url":"/icons/console.png",
-      "icon_name": "xbox-series-x"
+      "icon_name": "xbox-series-x",
+      "icon_attribution": ""
     }
   },
   {
@@ -435,7 +457,8 @@
       "author":"Adam Badowski",
       "company":"CD Projekt Red",
       "icon_url":"/icons/console.png",
-      "icon_name": "pc"
+      "icon_name": "pc",
+      "icon_attribution": ""
     }
   },
   {
@@ -454,7 +477,8 @@
       "author":"Aya Kyogoku",
       "company":"Nintendo",
       "icon_url":"/icons/console.png",
-      "icon_name": "nes-switch"
+      "icon_name": "nes-switch",
+      "icon_attribution": ""
     }
   }
 ]

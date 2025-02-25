@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="200" height="150">
+  <!-- Console Body -->
+  <rect x="25" y="30" width="150" height="70" rx="15" ry="15" fill="#1A237E" stroke="#3949AB" stroke-width="5"/>
+
+  <!-- Console Top Detail -->
+  <rect x="25" y="40" width="150" height="10" fill="#0D47A1"/>
+
+  <!-- Cartridge Slot -->
+  <rect x="65" y="55" width="70" height="10" fill="#263238"/>
+
+  <!-- Controller Ports -->
+  <circle cx="40" cy="110" r="8" fill="#FFEB3B"/>
+  <circle cx="80" cy="110" r="8" fill="#FFEB3B"/>
+  <circle cx="120" cy="110" r="8" fill="#FFEB3B"/>
+  <circle cx="160" cy="110" r="8" fill="#FFEB3B"/>
+  
+  <!-- Power Button -->
+  <circle cx="160" cy="50" r="7" fill="#FF5722"/>
+  
+  <!-- Reset Button -->
+  <circle cx="160" cy="70" r="7" fill="#4CAF50"/>
+  
+  <!-- Nintendo Logo Text -->
+  <text x="75" y="45" font-family="Arial" font-size="14" fill="#FFFFFF">N64</text>
+  
+  <!-- Stylized Base -->
+  <rect x="60" y="120" width="80" height="12" fill="#455A64"/>
+  
+  <!-- Joystick Button Detail -->
+  <circle cx="35" cy="45" r="5" fill="#FFFFFF"/>
+  <circle cx="35" cy="65" r="5" fill="#FFFFFF"/>
+  <circle cx="170" cy="45" r="5" fill="#FFFFFF"/>
+  <circle cx="170" cy="65" r="5" fill="#FFFFFF"/>
+</svg>
