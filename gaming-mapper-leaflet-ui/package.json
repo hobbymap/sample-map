@@ -2,6 +2,7 @@
   "name": "gaming-mapper-leaflet-ui",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
   "dependencies": {
     "@maplibre/maplibre-gl-leaflet": "^0.0.22",
     "@testing-library/dom": "^10.4.0",

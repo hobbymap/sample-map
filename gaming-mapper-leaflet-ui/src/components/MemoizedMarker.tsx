@@ -1,17 +1,31 @@
 import L from "leaflet";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Marker, Popup } from "react-leaflet";
 import { Tooltip } from "react-leaflet";
 
 
 // Memoize the Marker component to prevent unnecessary re-renders
-const MemoizedMarker = React.memo(({ feature, fetchWikiContent, wikiContent }: any) => {
+const MemoizedMarker = React.memo(({ feature, fetchWikiContent }: any) => {
+    const [wikiContent, setWikiContent] = useState<string>("");
+
     const icon = React.useMemo(() => L.icon({
-      iconUrl: feature.properties.icon_url || "/icons/console.png",
+      iconUrl: `${process.env.PUBLIC_URL}${feature.properties.icon_url}` || `${process.env.PUBLIC_URL}icons/console.png`,
       iconSize: [65, 65],
     //   iconAnchor: [16, 32],
       popupAnchor: [0, -32],
     }), [feature.properties.icon_url]); // Only recreate icon if URL changes
+  
+    const popupRef = useRef<any>(null);
+
+    useEffect(() => {
+      // Fetch Wikipedia content if it hasn't been fetched yet
+      const id = feature.id;
+      if (!wikiContent) {
+        fetchWikiContent(feature.properties.gaming_system, id).then((content: React.SetStateAction<string>) => {
+          setWikiContent(content); // Update state once the content is fetched
+        });
+      }
+    }, [feature, fetchWikiContent, wikiContent]);
   
     return (
       <Marker
@@ -23,10 +37,11 @@ const MemoizedMarker = React.memo(({ feature, fetchWikiContent, wikiContent }: a
           <span style={{ fontSize: "15px" }}>{feature.properties.gaming_system}</span>
         </Tooltip>
         <Popup
+          ref={popupRef}
           closeButton={true}
           closeOnClick={true}
           closeOnEscapeKey={true}
-          {...fetchWikiContent(feature.properties.gaming_system, feature.id)}
+          // eventHandlers={handlePopupOpen}
         >
           <h3>{feature.properties.game_name}</h3>
           <p><strong>System:</strong> {feature.properties.gaming_system}</p>
@@ -56,13 +71,13 @@ const MemoizedMarker = React.memo(({ feature, fetchWikiContent, wikiContent }: a
             padding: "10px",
             backgroundColor: "#f9f9f9"
           }}>
-            {wikiContent[feature.id] || "Loading Wikipedia content..."}
+            {wikiContent || "Loading Wikipedia content..."}
           </div>
   
           <p>
             <i>
-              <a target="_blank" rel="noopener noreferrer" href={`https://en.wikipedia.org/wiki/${encodeURIComponent(feature.properties.details_url)}`}>
-                Read more on Wikipedia
+            <a target="_blank" rel="noopener noreferrer" href={feature.properties.details_url}>
+            Read more on Wikipedia
               </a>
             </i>
           </p>
