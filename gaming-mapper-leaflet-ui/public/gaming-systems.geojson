@@ -44,7 +44,6 @@
      "icon_name": "atari",
      "icon_attribution_url": "https://www.freepik.com/search",
      "icon_attribution_title": "Icon by UIcons",
-     "details": "The Atari 2600 was one of the first gaming consoles to use interchangeable cartridges.",
      "details_url": "https://en.wikipedia.org/wiki/Atari_2600",
      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Atari-2600-Wood-4Sw-Set.png/1920px-Atari-2600-Wood-4Sw-Set.png"
    }
@@ -66,9 +65,8 @@
      "company":"Nintendo",
      "icon_url":"/icons/nes.png",
      "icon_name": "nes",
-     "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
-     "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
-     "details": "The NES revitalized the gaming industry and introduced iconic franchises.",
+     "icon_attribution_url": "https://www.flaticon.com/free-icons/nintendo",
+     "icon_attribution_title": "Nintendo icons created by magnemizer - Flaticon",
      "details_url": "https://en.wikipedia.org/wiki/Nintendo_Entertainment_System",
      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/NES-Console-Set.png/220px-NES-Console-Set.png"
    }
@@ -92,7 +90,6 @@
      "icon_name": "playstation",
      "icon_attribution_url": "https://www.flaticon.com/free-icons/controller",
      "icon_attribution_title": "Controller icons created by Freepik - Flaticon",
-     "details": "The PlayStation introduced 3D gaming to the mainstream.",
      "details_url": "https://en.wikipedia.org/wiki/PlayStation_(console)",
      "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/PlayStation-SCPH-1000-with-Controller.png/250px-PlayStation-SCPH-1000-with-Controller.png"
    }
@@ -101,22 +98,21 @@
    "id": 5,
    "type": "Feature",
    "geometry": {
-      "type": "Point",
-      "coordinates":  [-122.3321,47.6062]
-   },
-   "properties": {
-     "id": 5,
-     "gaming_system":"Xbox",
-     "game_name":"Halo: Combat Evolved",
-     "release_date":"11/15/2001",
-     "release_location_city":"Seattle",
+    "type": "Point",
+    "coordinates":  [-122.1215,47.674]
+ },
+ "properties": {
+   "id": 13,
+   "gaming_system":"Xbox",
+   "game_name":"Halo: Combat Evolved",
+   "release_date":"11/15/2001",
+   "release_location_city":"Redmond, WA",
      "author":"Bungie",
      "company":"Microsoft",
      "icon_url":"/icons/xbox.png",
      "icon_name": "xbox",
      "icon_attribution_url": "https://www.flaticon.com/free-icons/gamepad",
      "icon_attribution_title": "Gamepad icons created by Smashicons - Flaticon",
-     "details": "The Xbox brought online console gaming to prominence.",
      "details_url": "https://en.wikipedia.org/wiki/Xbox_(console)",
      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Xbox-Console-wDuke-L.jpg/250px-Xbox-Console-wDuke-L.jpg"
    }
@@ -140,7 +136,6 @@
       "icon_name": "game-boy",
       "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
       "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
-      "details": "The hand-held gaming console became a cultural icon.",
       "details_url": "https://en.wikipedia.org/wiki/Game_Boy",
       "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Game-Boy-FL.png/220px-Game-Boy-FL.png"
     }
@@ -164,7 +159,6 @@
       "icon_name": "turbografix",
       "icon_attribution_url": "https://www.flaticon.com/free-icons/gaming",
       "icon_attribution_title": "Gaming icons created by POD Gladiator - Flaticon",
-      "details": "Also known as the PC Engine, it used a 16-bit graphics processing unit (GPU) chipset. It was considered the smallest home game console.",
       "details_url": "https://en.wikipedia.org/wiki/TurboGrafx-16",
       "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/TurboGrafx16-Console-Set.jpg/250px-TurboGrafx16-Console-Set.jpg"
     }
@@ -184,13 +178,12 @@
       "release_location_city":"Kyoto",
       "author":"Shigeru Miyamoto",
       "company":"Nintendo",
-      "icon_url":"/icons/console.png",
+      "icon_url":"/icons/snes.png",
       "icon_name": "snes",
-      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
-      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
-      "details": "",
-      "details_url": "",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/SNES-Mod1-Console-Set.png"
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/game-pad",
+      "icon_attribution_title": "Game pad icons created by Rmpp - Flaticon",
+      "details_url": "https://en.wikipedia.org/wiki/Super_Nintendo_Entertainment_System",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/SNES-Mod1-Console-Set.jpg/250px-SNES-Mod1-Console-Set.jpg"
     }
   },
   {
@@ -208,37 +201,12 @@
       "release_location_city":"Tokyo",
       "author":"Yuji Naka",
       "company":"Sega",
-      "icon_url":"/icons/console.png",
+      "icon_url":"/icons/sega-genesis.png",
       "icon_name": "sega-genesis",
-      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
-      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
-      "details": "",
-      "details_url": "",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Sega-Genesis-Mk2-6button.png"
-    }
-  },
-  {
-    "id": 10,
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [139.6917,35.6895]
-    },
-    "properties": {
-      "id": 10,
-      "gaming_system":"PlayStation",
-      "game_name":"Final Fantasy VII",
-      "release_date":"1/31/1997",
-      "release_location_city":"Tokyo",
-      "author":"Hironobu Sakaguchi",
-      "company":"Square Enix",
-      "icon_url":"/icons/console.png",
-      "icon_name": "playstation",
-      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
-      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
-      "details": "",
-      "details_url": "",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/PSX-Console-wController.png"
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/gaming",
+      "icon_attribution_title": "Gaming icons created by RIkas Dzihab - Flaticon",
+      "details_url": "https://en.wikipedia.org/wiki/Sega_Genesis",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Sega-Mega-Drive-JP-Mk1-Console-Set.jpg/250px-Sega-Mega-Drive-JP-Mk1-Console-Set.jpg"
     }
   },
   {
@@ -256,13 +224,12 @@
       "release_location_city":"Kyoto",
       "author":"Shigeru Miyamoto",
       "company":"Nintendo",
-      "icon_url":"/icons/console.png",
+      "icon_url":"/icons/nes64.png",
       "icon_name": "nes64",
-      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
-      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
-      "details": "",
-      "details_url": "",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/N64-Console-Set.png"
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/nintendo",
+      "icon_attribution_title": "Nintendo icons created by Ekros - Flaticon",
+      "details_url": "https://en.wikipedia.org/wiki/Nintendo_64",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/N64-Console-Set.jpg/220px-N64-Console-Set.jpg"
     }
   },
   {
@@ -280,37 +247,12 @@
       "release_location_city":"New York City, NY",
       "author":"Sam Houser",
       "company":"Rockstar Games",
-      "icon_url":"/icons/console.png",
+      "icon_url":"/icons/ps2.png",
       "icon_name": "ps2",
-      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
-      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
-      "details": "",
-      "details_url": "",
-      "image_url": ""
-    }
-  },
-  {
-    "id": 13,
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [-122.1215,47.674]
-    },
-    "properties": {
-      "id": 13,
-      "gaming_system":"Xbox",
-      "game_name":"Halo: Combat Evolved",
-      "release_date":"11/15/2001",
-      "release_location_city":"Redmond, WA",
-      "author":"Bungie",
-      "company":"Microsoft",
-      "icon_url":"/icons/console.png",
-      "icon_name": "xbox",
-      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
-      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
-      "details": "",
-      "details_url": "",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Xbox-console.jpg"
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/gaming",
+      "icon_attribution_title": "Gaming icons created by Smashicons - Flaticon",
+      "details_url": "https://en.wikipedia.org/wiki/PlayStation_2",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/PS2-Versions.jpg/220px-PS2-Versions.jpg"
     }
   },
   {
@@ -328,13 +270,12 @@
       "release_location_city":"Austin, TX",
       "author":"Retro Studios",
       "company":"Nintendo",
-      "icon_url":"/icons/console.png",
+      "icon_url":"/icons/gamecube.png",
       "icon_name": "gamecube",
-      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
-      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
-      "details": "",
-      "details_url": "",
-      "image_url": ""
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/nintendo",
+      "icon_attribution_title": "Nintendo icons created by Freepik - Flaticon",
+      "details_url": "https://en.wikipedia.org/wiki/GameCube",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/GameCube-Set.jpg/220px-GameCube-Set.jpg"
     }
   },
   {
@@ -352,13 +293,12 @@
       "release_location_city":"Santa Monica, CA",
       "author":"Naughty Dog",
       "company":"Sony Computer Entertainment",
-      "icon_url":"/icons/console.png",
+      "icon_url":"/icons/ps3.png",
       "icon_name": "ps3",
-      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
-      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
-      "details": "",
-      "details_url": "",
-      "image_url": ""
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/gamepad",
+      "icon_attribution_title": "Gamepad icons created by magnemizer - Flaticon",
+      "details_url": "https://en.wikipedia.org/wiki/PlayStation_3",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/PS3_consoles_montage.png/220px-PS3_consoles_montage.png"
     }
   },
   {
@@ -376,13 +316,12 @@
       "release_location_city":"Cary, NC",
       "author":"Cliff Bleszinski",
       "company":"Epic Games",
-      "icon_url":"/icons/console.png",
+      "icon_url":"/icons/xbox360.png",
       "icon_name": "xbox360",
-      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
-      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
-      "details": "",
-      "details_url": "",
-      "image_url": ""
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/xbox",
+      "icon_attribution_title": "Xbox icons created by Valter Bispo - Flaticon",
+      "details_url": "https://en.wikipedia.org/wiki/Xbox_360",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Microsoft-Xbox-360-E-wController.jpg/85px-Microsoft-Xbox-360-E-wController.jpg"
     }
   },
   {
@@ -400,13 +339,12 @@
       "release_location_city":"Kyoto",
       "author":"Shigeru Miyamoto",
       "company":"Nintendo",
-      "icon_url":"/icons/console.png",
+      "icon_url":"/icons/wii.png",
       "icon_name": "neswii",
-      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
-      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
-      "details": "",
-      "details_url": "",
-      "image_url": ""
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/wii",
+      "icon_attribution_title": "Wii icons created by Eucalyp - Flaticon",
+      "details_url": "https://en.wikipedia.org/wiki/Wii",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Wii-Console.png/220px-Wii-Console.png"
     }
   },
   {
@@ -424,13 +362,12 @@
       "release_location_city":"Santa Monica, CA",
       "author":"Neil Druckmann",
       "company":"Naughty Dog",
-      "icon_url":"/icons/console.png",
+      "icon_url":"/icons/ps4.png",
       "icon_name": "ps4",
-      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
-      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
-      "details": "",
-      "details_url": "",
-      "image_url": ""
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/ps4",
+      "icon_attribution_title": "Ps4 icons created by Freepik - Flaticon",
+      "details_url": "https://en.wikipedia.org/wiki/PlayStation_4",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/PS4-Console-wDS4.jpg/220px-PS4-Console-wDS4.jpg"
     }
   },
   {
@@ -448,13 +385,12 @@
       "release_location_city":"Redmond, WA",
       "author":"Tim Longo",
       "company":"343 Industries",
-      "icon_url":"/icons/console.png",
-      "icon_name": "xboxone",
-      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
-      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
-      "details": "",
-      "details_url": "",
-      "image_url": ""
+      "icon_url":"/icons/xbox-one.png",
+      "icon_name": "xbox-one",
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/xbox",
+      "icon_attribution_title": "Xbox icons created by Valter Bispo - Flaticon",
+      "details_url": "https://en.wikipedia.org/wiki/Xbox_One",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Xbox_One_consoles_montage.png/300px-Xbox_One_consoles_montage.png"
     }
   },
   {
@@ -476,9 +412,8 @@
       "icon_name": "nes-switch",
       "icon_attribution_url": "https://www.flaticon.com/free-icons/handheld-console",
       "icon_attribution_title": "Handheld console icons created by Freepik - Flaticon",
-      "details": "",
-      "details_url": "",
-      "image_url": ""
+      "details_url": "https://en.wikipedia.org/wiki/Nintendo_Switch",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Nintendo-Switch-wJoyCons-BlRd-Standing-FL.jpg/300px-Nintendo-Switch-wJoyCons-BlRd-Standing-FL.jpg"
     }
   },
   {
@@ -496,13 +431,12 @@
       "release_location_city":"Santa Monica, CA",
       "author":"Eric Williams",
       "company":"Santa Monica Studio",
-      "icon_url":"/icons/console.png",
+      "icon_url":"/icons/ps5.png",
       "icon_name": "ps5",
-      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
-      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
-      "details": "",
-      "details_url": "",
-      "image_url": ""
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/gaming",
+      "icon_attribution_title": "Gaming icons created by cobynecz - Flaticon",
+      "details_url": "https://en.wikipedia.org/wiki/PlayStation_5",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Black_and_white_Playstation_5_base_edition_with_controller.png/220px-Black_and_white_Playstation_5_base_edition_with_controller.png"
     }
   },
   {
@@ -520,61 +454,12 @@
       "release_location_city":"Leamington Spa",
       "author":"Mike Brown",
       "company":"Playground Games",
-      "icon_url":"/icons/console.png",
+      "icon_url":"/icons/xbox-series-x.png",
       "icon_name": "xbox-series-x",
-      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
-      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
-      "details": "",
-      "details_url": "",
-      "image_url": ""
-    }
-  },
-  {
-    "id": 23,
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [21.0122,52.2298]
-    },
-    "properties": {
-      "id": 23,
-      "gaming_system":"PC",
-      "game_name":"Cyberpunk 2077",
-      "release_date":"12/10/2020",
-      "release_location_city":"Warsaw",
-      "author":"Adam Badowski",
-      "company":"CD Projekt Red",
-      "icon_url":"/icons/console.png",
-      "icon_name": "pc",
-      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
-      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
-      "details": "",
-      "details_url": "",
-      "image_url": ""
-    }
-  },
-  {
-    "id": 24,
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [135.7681,35.0116]
-    },
-    "properties": {
-      "id": 24,
-      "gaming_system":"Nintendo Switch",
-      "game_name":"Animal Crossing: New Horizons",
-      "release_date":"3/20/2020",
-      "release_location_city":"Kyoto",
-      "author":"Aya Kyogoku",
-      "company":"Nintendo",
-      "icon_url":"/icons/console.png",
-      "icon_name": "nes-switch",
-      "icon_attribution_url": "https://www.flaticon.com/free-icons/joystick",
-      "icon_attribution_title": "Joystick icons created by Good Ware - Flaticon",
-      "details": "",
-      "details_url": "",
-      "image_url": ""
+      "icon_attribution_url": "https://www.flaticon.com/free-icons/xbox",
+      "icon_attribution_title": "Xbox icons created by agus raharjo - Flaticon",
+      "details_url": "https://en.wikipedia.org/wiki/Xbox_Series_X_and_Series_S#Xbox_Series_X",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Xbox_Series_S_with_controller.jpg/130px-Xbox_Series_S_with_controller.jpg"
     }
   }
 ]
