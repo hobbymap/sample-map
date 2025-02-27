@@ -62,7 +62,10 @@ const MemoizedMarker = React.memo(({ feature, fetchWikiContent }: any) => {
           <p><strong>Release Date:</strong> {feature.properties.release_date}</p>
           <p><strong>Location:</strong> {feature.properties.release_location_city}</p>
           <p><strong>Company:</strong> {feature.properties.company}</p>
-  
+          <p><strong>Original Price (US $):</strong> {feature.properties.original_price_us}</p>
+          <p><strong>2024 Equivalent Price:</strong> {feature.properties.price_2024}</p>
+          <p><strong>Total Units Sold:</strong> {feature.properties.units_sold}</p>
+          
           {/* Scrollable Wikipedia Content */}
           <div style={{
             maxHeight: "150px",
