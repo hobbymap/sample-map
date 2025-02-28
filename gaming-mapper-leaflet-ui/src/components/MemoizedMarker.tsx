@@ -8,6 +8,22 @@ import { Tooltip } from "react-leaflet";
 const MemoizedMarker = React.memo(({ feature, fetchWikiContent }: any) => {
     const [wikiContent, setWikiContent] = useState<string>("");
 
+    // Format date as January 1, 2000
+    const formatDate = (dateString: string): string => {
+      const date = new Date(dateString);
+      return date.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      });
+    };
+
+    // Format units sold
+    const formatNumber = (value: number): string => {
+      if (value === -1) return "N/A";
+      return value.toLocaleString("en-US");
+    };
+
     const icon = React.useMemo(() => L.icon({
       iconUrl: `${process.env.PUBLIC_URL}${feature.properties.icon_url}` || `${process.env.PUBLIC_URL}icons/console.png`,
       iconSize: [65, 65],
@@ -41,7 +57,6 @@ const MemoizedMarker = React.memo(({ feature, fetchWikiContent }: any) => {
           closeButton={true}
           closeOnClick={true}
           closeOnEscapeKey={true}
-          // eventHandlers={handlePopupOpen}
         >
           <h3>{feature.properties.game_name}</h3>
           <p><strong>System:</strong> {feature.properties.gaming_system}</p>
@@ -59,12 +74,12 @@ const MemoizedMarker = React.memo(({ feature, fetchWikiContent }: any) => {
           />
           <p><strong>Sample Game:</strong> {feature.properties.game_name}</p>
           <p><strong>Author:</strong> {feature.properties.author}</p>
-          <p><strong>Release Date:</strong> {feature.properties.release_date}</p>
+          <p><strong>Release Date:</strong> {formatDate(feature.properties.release_date)}</p>
           <p><strong>Location:</strong> {feature.properties.release_location_city}</p>
           <p><strong>Company:</strong> {feature.properties.company}</p>
-          <p><strong>Original Price (US $):</strong> {feature.properties.original_price_us}</p>
-          <p><strong>2024 Equivalent Price:</strong> {feature.properties.price_2024}</p>
-          <p><strong>Total Units Sold:</strong> {feature.properties.units_sold}</p>
+          <p><strong>Original Price:</strong> US ${feature.properties.original_price_us}</p>
+          <p><strong>2024 Equivalent Price:</strong> US ${feature.properties.price_2024}</p>
+          <p><strong>Total Units Sold:</strong> {formatNumber(feature.properties.units_sold)}</p>
           
           {/* Scrollable Wikipedia Content */}
           <div style={{
