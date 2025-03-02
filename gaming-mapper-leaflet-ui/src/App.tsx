@@ -96,17 +96,17 @@ return (
       onClick={() => setAboutOpen(true)}
       sx={{
         position: "absolute",
-        bottom: 20, // Moves it to the lower part of the screen
-        left: 20, // Moves it to the left side
-        zIndex: 5000, // Ensures it's above the map
+        bottom: 80, // Move it higher to avoid being covered
+        left: 20, // Align left
+        zIndex: 3000, // Ensure it's always visible
         backgroundColor: "white",
         borderRadius: "50%",
-        padding: "15px", // Makes button larger
+        padding: "20px", // Make button larger
         boxShadow: "0px 4px 8px rgba(0,0,0,0.3)",
         "&:hover": { backgroundColor: "#f0f0f0" },
       }}
     >
-      <InfoIcon sx={{ fontSize: 40, color: "primary.main" }} /> {/* Makes the icon larger */}
+      <InfoIcon sx={{ fontSize: 50, color: "primary.main" }} /> {/* Larger icon */}
     </IconButton>
 
     {/* About Page Dialog */}

@@ -81,7 +81,7 @@ const MemoizedMarker = React.memo(({ feature, fetchWikiContent }: any) => {
           <h3 style={{ fontSize: window.innerWidth < 600 ? "14px" : "18px" }}>
             {feature.properties.game_name}
           </h3>
-          <p><strong>System:</strong> {feature.properties.gaming_system}</p>
+          <div><strong>System:</strong> {feature.properties.gaming_system}</div>
           <img
             src={feature.properties.image_url}
             alt={feature.properties.gaming_system}
@@ -94,36 +94,37 @@ const MemoizedMarker = React.memo(({ feature, fetchWikiContent }: any) => {
               marginBottom: "10px",
             }}
           />
-          <p><strong>Sample Game:</strong> {feature.properties.game_name}</p>
-          <p><strong>Author:</strong> {feature.properties.author}</p>
-          <p><strong>Release Date:</strong> {formatDate(feature.properties.release_date)}</p>
-          <p><strong>Location:</strong> {feature.properties.release_location_city}</p>
-          <p><strong>Company:</strong> {feature.properties.company}</p>
-          <p><strong>Original Price:</strong> US ${feature.properties.original_price_us}</p>
-          <p><strong>2024 Equivalent Price:</strong> US ${feature.properties.price_2024}</p>
-          <p><strong>Total Units Sold:</strong> {formatNumber(feature.properties.units_sold)}</p>
+          <div><strong>Sample Game:</strong> {feature.properties.game_name}</div>
+          <div><strong>Author:</strong> {feature.properties.author}</div>
+          <div><strong>Release Date:</strong> {formatDate(feature.properties.release_date)}</div>
+          <div><strong>Location:</strong> {feature.properties.release_location_city}</div>
+          <div><strong>Company:</strong> {feature.properties.company}</div>
+          <div><strong>Original Price:</strong> US ${feature.properties.original_price_us}</div>
+          <div><strong>2024 Equivalent Price:</strong> US ${feature.properties.price_2024}</div>
+          <div><strong>Total Units Sold:</strong> {formatNumber(feature.properties.units_sold)}</div>
           
           {/* Scrollable Wikipedia Content */}
           <div
             style={{
-              maxHeight: "100px", // Reduce scroll height on small screens
+              maxHeight: "90px",
               overflowY: "auto",
               border: "1px solid #ddd",
-              padding: "10px",
+              padding: "6px",
               backgroundColor: "#f9f9f9",
-              fontSize: window.innerWidth < 600 ? "12px" : "14px",
+              fontSize: "12px",
+              lineHeight: "1.2", // Reduce line spacing
             }}
           >
             {wikiContent || "Loading Wikipedia content..."}
           </div>
   
-          <p>
+          <div>
             <i>
             <a target="_blank" rel="noopener noreferrer" href={feature.properties.details_url}>
             Read more on Wikipedia
               </a>
             </i>
-          </p>
+          </div>
           <div style={{fontSize: "5px"}}>
             <i>
               <a target="_blank" rel="noopener noreferrer" href={feature.properties.icon_attribution_url}>
