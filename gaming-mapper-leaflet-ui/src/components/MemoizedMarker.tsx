@@ -7,6 +7,10 @@ import { Tooltip } from "react-leaflet";
 // Memoize the Marker component to prevent unnecessary re-renders
 const MemoizedMarker = React.memo(({ feature, fetchWikiContent }: any) => {
     const [wikiContent, setWikiContent] = useState<string>("");
+    const [position, setPosition] = useState<[number, number]>([
+      feature.geometry.coordinates[1],
+      feature.geometry.coordinates[0],
+    ]);
 
     // Format date as January 1, 2000
     const formatDate = (dateString: string): string => {
@@ -43,10 +47,25 @@ const MemoizedMarker = React.memo(({ feature, fetchWikiContent }: any) => {
       }
     }, [feature, fetchWikiContent, wikiContent]);
   
+    const handleDragEnd = (event: any) => {
+      const newLatLng = event.target.getLatLng();
+      setPosition([newLatLng.lat, newLatLng.lng]);
+    };
+
+    // Dynamically adjust popup width based on screen size
+    const popupStyle: React.CSSProperties = {
+      maxWidth: window.innerWidth < 600 ? "200px" : "300px", // Smaller on small screens
+      padding: "10px",
+    };
+
     return (
       <Marker
         key={feature.id}
-        position={[feature.geometry.coordinates[1], feature.geometry.coordinates[0]]}
+        position={position}
+        draggable={true} 
+        eventHandlers={{
+          dragend: handleDragEnd, // Updates position on drag
+        }}
         icon={icon}
       >
         <Tooltip direction="top" offset={[0, -30]} opacity={25}>
@@ -55,22 +74,25 @@ const MemoizedMarker = React.memo(({ feature, fetchWikiContent }: any) => {
         <Popup
           ref={popupRef}
           closeButton={true}
-          closeOnClick={true}
           closeOnEscapeKey={true}
+          closeOnClick={false}
         >
-          <h3>{feature.properties.game_name}</h3>
+          <div style={popupStyle}>
+          <h3 style={{ fontSize: window.innerWidth < 600 ? "14px" : "18px" }}>
+            {feature.properties.game_name}
+          </h3>
           <p><strong>System:</strong> {feature.properties.gaming_system}</p>
-          <img 
-            src={feature.properties.image_url} 
-            alt={feature.properties.gaming_system} 
+          <img
+            src={feature.properties.image_url}
+            alt={feature.properties.gaming_system}
             style={{
               width: "100%",
-              maxWidth: "200px",
+              maxWidth: window.innerWidth < 600 ? "120px" : "200px", // Adjust image size for mobile
               height: "auto",
               borderRadius: "10px",
               boxShadow: "0px 4px 8px rgba(0,0,0,0.2)",
-              marginBottom: "10px"
-            }} 
+              marginBottom: "10px",
+            }}
           />
           <p><strong>Sample Game:</strong> {feature.properties.game_name}</p>
           <p><strong>Author:</strong> {feature.properties.author}</p>
@@ -82,13 +104,16 @@ const MemoizedMarker = React.memo(({ feature, fetchWikiContent }: any) => {
           <p><strong>Total Units Sold:</strong> {formatNumber(feature.properties.units_sold)}</p>
           
           {/* Scrollable Wikipedia Content */}
-          <div style={{
-            maxHeight: "150px",
-            overflowY: "auto",
-            border: "1px solid #ddd",
-            padding: "10px",
-            backgroundColor: "#f9f9f9"
-          }}>
+          <div
+            style={{
+              maxHeight: "100px", // Reduce scroll height on small screens
+              overflowY: "auto",
+              border: "1px solid #ddd",
+              padding: "10px",
+              backgroundColor: "#f9f9f9",
+              fontSize: window.innerWidth < 600 ? "12px" : "14px",
+            }}
+          >
             {wikiContent || "Loading Wikipedia content..."}
           </div>
   
@@ -105,6 +130,7 @@ const MemoizedMarker = React.memo(({ feature, fetchWikiContent }: any) => {
                 {feature.properties.icon_attribution_title}
               </a>
             </i>
+          </div>
           </div>
         </Popup>
       </Marker>

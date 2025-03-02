@@ -10,10 +10,15 @@ import { FeatureCollection } from "geojson";
 import MapLibreTileLayer from "./MapLibreTileLayer";
 import React from "react";
 import MemoizedMarker from "./components/MemoizedMarker";
+import Slider from "@mui/material/Slider";
+import { Box, Dialog, DialogTitle, DialogContent, Typography, IconButton } from "@mui/material";
+import InfoIcon from "@mui/icons-material/Info";
 
 export default function App() {
   const [gameData, setGameData] = useState<FeatureCollection | null>(null);
-  
+  const [selectedYear, setSelectedYear] = useState<number>(2024); // Default year, show all years
+  const [aboutOpen, setAboutOpen] = useState(false); // State for About Dialog
+
   useEffect(() => {
     fetch(`${process.env.PUBLIC_URL}/data/gaming-systems.geojson`)
       .then((response) => response.json())
@@ -59,19 +64,96 @@ const fetchWikiContent = async (title: string, id: string) => {
   return wikiContent;
 };
 
-const markers = React.useMemo(() => (
-  gameData?.features.map((feature: any) => (
-    <MemoizedMarker
-      key={feature.id}
-      feature={feature}
-      fetchWikiContent={fetchWikiContent}
-    />
-  ))
-), [gameData]);  // Re-run when gameData changes
+const markers = React.useMemo(() => {
+  if (!gameData) return [];
+
+  // Store unique markers in a Map (ensures no duplicate markers)
+  const uniqueMarkers = new Map<string, any>();
+
+  gameData.features.forEach((feature: any) => {
+    const releaseYear = new Date(feature.properties.release_date).getFullYear();
+
+    // Add only if the release year is <= selectedYear
+    if (releaseYear <= selectedYear) {
+      uniqueMarkers.set(feature.id, feature); // Prevents duplicate markers
+    }
+  });
+
+  return Array.from(uniqueMarkers.values()).map((feature) => (
+    <MemoizedMarker key={feature.id} feature={feature} fetchWikiContent={fetchWikiContent} />
+  ));
+}, [gameData, selectedYear]); // Updates only when data or selected year changes
+
+const handleSliderChange = (_: Event, newValue: number | number[]) => {
+  setSelectedYear(newValue as number);
+};
 
 // Inside the main component:
 return (
-  <div id="map-container" style={{ height: "100vh", width: "100%" }}>
+  <div id="map-container" style={{ height: "100vh", width: "100%", position: "relative" }}>
+    {/* Floating Info Button */}
+    <IconButton
+      onClick={() => setAboutOpen(true)}
+      sx={{
+        position: "absolute",
+        bottom: 20, // Moves it to the lower part of the screen
+        left: 20, // Moves it to the left side
+        zIndex: 5000, // Ensures it's above the map
+        backgroundColor: "white",
+        borderRadius: "50%",
+        padding: "15px", // Makes button larger
+        boxShadow: "0px 4px 8px rgba(0,0,0,0.3)",
+        "&:hover": { backgroundColor: "#f0f0f0" },
+      }}
+    >
+      <InfoIcon sx={{ fontSize: 40, color: "primary.main" }} /> {/* Makes the icon larger */}
+    </IconButton>
+
+    {/* About Page Dialog */}
+    <Dialog open={aboutOpen} onClose={() => setAboutOpen(false)}>
+      <DialogTitle>About This Map</DialogTitle>
+      <DialogContent>
+        <Typography variant="body1">
+          This interactive map displays the **history of gaming systems** and their **global releases**.
+          Explore the different gaming consoles by selecting a year, and clicking on the markers to view more details.
+        </Typography>
+        <Typography variant="body2" sx={{ marginTop: 2, fontStyle: "italic" }}>
+          Data sourced from Wikipedia and other gaming archives.
+        </Typography>
+      </DialogContent>
+    </Dialog>
+
+    <Box
+      sx={{
+        position: "absolute",
+        top: "10px",
+        left: "50%",
+        transform: "translateX(-50%)", // Centers it horizontally
+        backgroundColor: "rgba(255, 255, 255, 0.9)",
+        padding: "15px",
+        borderRadius: "8px",
+        zIndex: 1000,
+        width: "350px", // Adjust width as needed
+        textAlign: "center", // Centers text and slider label
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center", // Centers content inside
+      }}
+    >
+      <Typography variant="h6">Select Year</Typography>
+      <Slider
+        value={selectedYear}
+        onChange={handleSliderChange}
+        min={1970}
+        max={2024}
+        step={1}
+        marks
+        valueLabelDisplay="auto"
+        sx={{
+          width: "90%", // Ensure slider doesn't take full width
+        }}
+      />
+    </Box>
     <MapContainer center={[40.67, -96.59]} maxZoom={22} zoom={3} style={{ height: "100%", width: "100%" }}>
       {/* This works, but need API when deploying */}
       {/* <MapLibreTileLayer
