@@ -75,7 +75,7 @@ const MemoizedMarker = React.memo(({ feature, fetchWikiContent }: any) => {
           </h3>
           <div><strong>System:</strong> {feature.properties.gaming_system}</div>
           <img
-            src={feature.properties.image_url}
+            src={`${process.env.PUBLIC_URL}${feature.properties.image_url}`}
             alt={feature.properties.gaming_system}
             style={{
               width: "100%",
