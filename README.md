@@ -3,9 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://ksundeen.github.io/the-gaming-mapper.index.html">
-    <img src="images/the-gaming-mapper.png" alt="Logo" width="80" height="80">
-  </a>
+  <img src="/gaming-mapper-leaflet-ui/public/images/the-gaming-mapper.png" width=75% height=75% display=flex justify-content=center>
 
   <h3 align="center">The Gaming Mapper</h3>
 
@@ -46,7 +44,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](/gaming-mapper-leaflet-ui/public/the-gaming-mapper.png)
+[![Product Name Screen Shot][product-screenshot]](/gaming-mapper-leaflet-ui/public/images/the-gaming-mapper.png)
 
 This project is a fun and interactive learning tool for how to get started with react, react-leaflet, and maplibre for opensource mapping information. We use free FLATICON icons for each gaming console.
 

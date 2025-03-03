@@ -47,7 +47,7 @@
      "icon_attribution_url": "https://www.freepik.com/search",
      "icon_attribution_title": "Icon by UIcons",
      "details_url": "https://en.wikipedia.org/wiki/Atari_2600",
-     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Atari-2600-Wood-4Sw-Set.png/1920px-Atari-2600-Wood-4Sw-Set.png",
+     "image_url": "/images/atari.JPEG",
      "original_price_us": 189.95,
      "price_2024": 990,
      "units_sold": 30000000
@@ -99,7 +99,7 @@
      "icon_attribution_url": "https://www.flaticon.com/free-icons/nintendo",
      "icon_attribution_title": "Nintendo icons created by magnemizer - Flaticon",
      "details_url": "https://en.wikipedia.org/wiki/Nintendo_Entertainment_System",
-     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/NES-Console-Set.png/220px-NES-Console-Set.png",
+     "image_url": "/images/nes.JPEG",
      "original_price_us": 179,
      "price_2024": 520,
      "units_sold": 61910000
@@ -203,7 +203,7 @@
     "icon_attribution_url": "https://www.flaticon.com/free-icons/game-pad",
     "icon_attribution_title": "Game pad icons created by Rmpp - Flaticon",
     "details_url": "https://en.wikipedia.org/wiki/Super_Nintendo_Entertainment_System",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/SNES-Mod1-Console-Set.jpg/250px-SNES-Mod1-Console-Set.jpg",
+    "image_url": "/images/snes.JPEG",
     "original_price_us": 199,
     "price_2024": 459.41,
     "units_sold": 49100000
@@ -229,7 +229,7 @@
      "icon_attribution_url": "https://www.flaticon.com/free-icons/controller",
      "icon_attribution_title": "Controller icons created by Freepik - Flaticon",
      "details_url": "https://en.wikipedia.org/wiki/PlayStation_(console)",
-     "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/PlayStation-SCPH-1000-with-Controller.png/250px-PlayStation-SCPH-1000-with-Controller.png",
+     "image_url": "/images/ps.png",
      "original_price_us": 299,
      "price_2024": 620,
      "units_sold": 102490000
@@ -255,7 +255,7 @@
       "icon_attribution_url": "https://www.flaticon.com/free-icons/nintendo",
       "icon_attribution_title": "Nintendo icons created by Ekros - Flaticon",
       "details_url": "https://en.wikipedia.org/wiki/Nintendo_64",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/N64-Console-Set.jpg/220px-N64-Console-Set.jpg",
+      "image_url": "/images/nes64.JPEG",
       "original_price_us": -1,
       "price_2024": -1,
       "units_sold": 32930000
@@ -281,7 +281,7 @@
       "icon_attribution_url": "https://www.flaticon.com/free-icons/nintendo",
       "icon_attribution_title": "Nintendo icons created by Freepik - Flaticon",
       "details_url": "https://en.wikipedia.org/wiki/GameCube",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/GameCube-Set.jpg/220px-GameCube-Set.jpg",
+      "image_url": "/images/gamecube.JPEG",
       "original_price_us": 199,
       "price_2024": 350,
       "units_sold": 21740000
@@ -385,7 +385,7 @@
       "icon_attribution_url": "https://www.flaticon.com/free-icons/gamepad",
       "icon_attribution_title": "Gamepad icons created by magnemizer - Flaticon",
       "details_url": "https://en.wikipedia.org/wiki/PlayStation_3",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/PS3_consoles_montage.png/220px-PS3_consoles_montage.png",
+      "image_url": "/images/ps3.JPEG",
       "original_price_us": 499.999,
       "price_2024": 780,
       "units_sold": 87400000
@@ -411,7 +411,7 @@
       "icon_attribution_url": "https://www.flaticon.com/free-icons/wii",
       "icon_attribution_title": "Wii icons created by Eucalyp - Flaticon",
       "details_url": "https://en.wikipedia.org/wiki/Wii",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Wii-Console.png/220px-Wii-Console.png",
+      "image_url": "/images/wii.JPEG",
       "original_price_us": 249.99,
       "price_2024": 392.48,
       "units_sold": 101630000
@@ -437,7 +437,7 @@
       "icon_attribution_url": "https://www.flaticon.com/free-icons/ps4",
       "icon_attribution_title": "Ps4 icons created by Freepik - Flaticon",
       "details_url": "https://en.wikipedia.org/wiki/PlayStation_4",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/PS4-Console-wDS4.jpg/220px-PS4-Console-wDS4.jpg",
+      "image_url": "/images/ps4.JPEG",
       "original_price_us": 399.99,
       "price_2024": 540,
       "units_sold": 106000000
@@ -541,7 +541,7 @@
       "icon_attribution_url": "https://www.flaticon.com/free-icons/gaming",
       "icon_attribution_title": "Gaming icons created by cobynecz - Flaticon",
       "details_url": "https://en.wikipedia.org/wiki/PlayStation_5",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Black_and_white_Playstation_5_base_edition_with_controller.png/220px-Black_and_white_Playstation_5_base_edition_with_controller.png",
+      "image_url": "/icons/ps5.JPEG",
       "original_price_us": 499,
       "price_2024": 513.97,
       "units_sold": 50000000
