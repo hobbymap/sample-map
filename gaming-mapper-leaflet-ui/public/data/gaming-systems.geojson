@@ -162,7 +162,7 @@
   "type": "Feature",
   "geometry": {
      "type": "Point",
-     "coordinates":  [138.2529,36.204824]
+     "coordinates":  [135.7681,35.0116]
   },
   "properties": {
     "id": 6,
@@ -260,21 +260,20 @@
       "price_2024": -1,
       "units_sold": 32930000
     }
-  },
-  
+  },  
    {
-    "id": 14,
+    "id": 10,
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [-97.7431,30.2672]
+       "coordinates":  [135.7681,35.0116]
     },
     "properties": {
-      "id": 14,
+      "id": 10,
       "gaming_system":"GameCube",
       "game_name":"Metroid Prime",
-      "release_date":"2001/09/47",
-      "release_location_city":"Austin, TX",
+      "release_date":"2001/09/14",
+      "release_location_city":"Japan",
       "author":"Retro Studios",
       "company":"Nintendo",
       "icon_url":"/icons/gamecube.png",

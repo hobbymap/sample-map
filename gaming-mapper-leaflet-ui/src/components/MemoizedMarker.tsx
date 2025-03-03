@@ -46,11 +46,6 @@ const MemoizedMarker = React.memo(({ feature, fetchWikiContent }: any) => {
         });
       }
     }, [feature, fetchWikiContent, wikiContent]);
-  
-    const handleDragEnd = (event: any) => {
-      const newLatLng = event.target.getLatLng();
-      setPosition([newLatLng.lat, newLatLng.lng]);
-    };
 
     // Dynamically adjust popup width based on screen size
     const popupStyle: React.CSSProperties = {
@@ -62,10 +57,7 @@ const MemoizedMarker = React.memo(({ feature, fetchWikiContent }: any) => {
       <Marker
         key={feature.id}
         position={position}
-        draggable={true} 
-        eventHandlers={{
-          dragend: handleDragEnd, // Updates position on drag
-        }}
+        draggable={false} 
         icon={icon}
       >
         <Tooltip direction="top" offset={[0, -30]} opacity={25}>
@@ -79,7 +71,7 @@ const MemoizedMarker = React.memo(({ feature, fetchWikiContent }: any) => {
         >
           <div style={popupStyle}>
           <h3 style={{ fontSize: window.innerWidth < 600 ? "14px" : "18px" }}>
-            {feature.properties.game_name}
+            {feature.properties.gaming_system}
           </h3>
           <div><strong>System:</strong> {feature.properties.gaming_system}</div>
           <img

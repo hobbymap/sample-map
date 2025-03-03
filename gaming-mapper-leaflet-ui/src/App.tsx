@@ -111,7 +111,7 @@ return (
 
     {/* About Page Dialog */}
     <Dialog open={aboutOpen} onClose={() => setAboutOpen(false)}>
-      <DialogTitle>About This Map</DialogTitle>
+      <DialogTitle>About The Gaming Mapper</DialogTitle>
       <DialogContent>
         <Typography variant="body1">
           This interactive map displays the **history of gaming systems** and their **global releases**.
