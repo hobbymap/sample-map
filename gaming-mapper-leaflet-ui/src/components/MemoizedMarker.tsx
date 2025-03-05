@@ -53,6 +53,8 @@ const MemoizedMarker = React.memo(({ feature, fetchWikiContent }: any) => {
       padding: "10px",
     };
 
+    const image_url = feature.properties.image_source === "kim-sundeen" ? `${process.env.PUBLIC_URL}${feature.properties.image_url}` : `${feature.properties.image_url}`
+
     return (
       <Marker
         key={feature.id}

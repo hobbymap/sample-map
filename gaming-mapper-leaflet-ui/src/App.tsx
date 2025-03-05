@@ -7,12 +7,18 @@ import MarkerClusterGroup from "react-leaflet-markercluster";
 import "leaflet.markercluster/dist/MarkerCluster.css";
 import "leaflet.markercluster/dist/MarkerCluster.Default.css";
 import { FeatureCollection } from "geojson";
-import MapLibreTileLayer from "./MapLibreTileLayer";
+// import MapLibreTileLayer from "./MapLibreTileLayer";
 import React from "react";
 import MemoizedMarker from "./components/MemoizedMarker";
-import Slider from "@mui/material/Slider";
-import { Box, Dialog, DialogTitle, DialogContent, Typography, IconButton } from "@mui/material";
-import InfoIcon from "@mui/icons-material/Info";
+import { Dialog, DialogTitle, DialogContent, Typography, IconButton } from "@mui/material";
+import HomeButton from "./components/HomeButton"
+import GamerIcon from "./components/GamerIcon";
+import TimeSlider from "./components/TimeSlider";
+
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./theme"; // Import the custom theme
+import CssBaseline from "@mui/material/CssBaseline"; // Normalizes styles
+
 
 export default function App() {
   const [gameData, setGameData] = useState<FeatureCollection | null>(null);
@@ -84,99 +90,58 @@ const markers = React.useMemo(() => {
   ));
 }, [gameData, selectedYear]); // Updates only when data or selected year changes
 
-const handleSliderChange = (_: Event, newValue: number | number[]) => {
-  setSelectedYear(newValue as number);
-};
-
 // Inside the main component:
 return (
-  <div id="map-container" style={{ height: "100vh", width: "100%", position: "relative" }}>
-    {/* Floating Info Button */}
-    <IconButton
-      onClick={() => setAboutOpen(true)}
-      sx={{
-        position: "absolute",
-        bottom: 80, // Move it higher to avoid being covered
-        left: 20, // Align left
-        zIndex: 3000, // Ensure it's always visible
-        backgroundColor: "white",
-        borderRadius: "50%",
-        padding: "20px", // Make button larger
-        boxShadow: "0px 4px 8px rgba(0,0,0,0.3)",
-        "&:hover": { backgroundColor: "#f0f0f0" },
-      }}
-    >
-      <InfoIcon sx={{ fontSize: 50, color: "primary.main" }} /> {/* Larger icon */}
-    </IconButton>
+  <ThemeProvider theme={theme}>
+      <CssBaseline /> 
+    <div id="map-container" style={{ height: "100vh", width: "100%", position: "relative" }}>
 
-    {/* About Page Dialog */}
-    <Dialog open={aboutOpen} onClose={() => setAboutOpen(false)}>
-      <DialogTitle>About The Gaming Mapper</DialogTitle>
-      <DialogContent>
-        <Typography variant="body1">
-          This interactive map displays the **history of gaming systems** and their **global releases**.
-          Explore the different gaming consoles by selecting a year, and clicking on the markers to view more details.
-        </Typography>
-        <Typography variant="body2" sx={{ marginTop: 2, fontStyle: "italic" }}>
-          Data sourced from Wikipedia and other gaming archives.
-        </Typography>
-      </DialogContent>
-    </Dialog>
+      <GamerIcon onClickFunc={setAboutOpen}/>
 
-    <Box
-      sx={{
-        position: "absolute",
-        top: "10px",
-        left: "50%",
-        transform: "translateX(-50%)", // Centers it horizontally
-        backgroundColor: "rgba(255, 255, 255, 0.9)",
-        padding: "15px",
-        borderRadius: "8px",
-        zIndex: 1000,
-        width: "350px", // Adjust width as needed
-        textAlign: "center", // Centers text and slider label
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center", // Centers content inside
-      }}
-    >
-      <Typography variant="h6">Select Year</Typography>
-      <Slider
-        value={selectedYear}
-        onChange={handleSliderChange}
-        min={1970}
-        max={2024}
-        step={1}
-        marks
-        valueLabelDisplay="auto"
-        sx={{
-          width: "90%", // Ensure slider doesn't take full width
-        }}
+      <TimeSlider 
+        setSelectedYearFunc={setSelectedYear}
+        selectedYear={selectedYear}
       />
-    </Box>
-    <MapContainer center={[40.67, -96.59]} maxZoom={22} zoom={3} style={{ height: "100%", width: "100%" }}>
-      {/* This works, but need API when deploying */}
-      {/* <MapLibreTileLayer
-        attribution='&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
-        url="https://tiles.stadiamaps.com/styles/alidade_smooth.json"
-        maxZoom={22}
-      /> */}
-      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      <MapClickHandler />
 
-      {/* Marker Clustering with Custom Cluster Icons */}
-      <MarkerClusterGroup
-        showCoverageOnHover={true}
-        maxClusterRadius={50}
-        spiderfyDistanceMultiplier={2.5}  // Increase spacing when expanded
-        disableClusteringAtZoom={15} // Uncluster markers at close zoom
-        spiderLegPolylineOptions={{ weight: 1.5, color: "#007bff", opacity: 0.6 }} // Style spider lines
-        iconCreateFunction={createClusterIcon} // Apply the custom cluster styling
-      >
-        {markers}
-      </MarkerClusterGroup>
-    </MapContainer>
-  </div>
+      {/* About Page Dialog */}
+      <Dialog open={aboutOpen} onClose={() => setAboutOpen(false)}>
+        <DialogTitle>About The Gaming Mapper</DialogTitle>
+        <DialogContent>
+          <Typography variant="body1">
+            This interactive map displays the **history of gaming systems** and their **global releases**.
+            Explore the different gaming consoles by selecting a year, and clicking on the markers to view more details.
+          </Typography>
+          <Typography variant="body2" sx={{ marginTop: 2, fontStyle: "italic" }}>
+            Data sourced from Wikipedia and other gaming archives.
+          </Typography>
+        </DialogContent>
+      </Dialog>
+
+      <MapContainer center={[40.67, -96.59]} maxZoom={22} zoom={3} style={{ height: "100%", width: "100%" }}>
+        {/* This works, but need API when deploying */}
+        {/* <MapLibreTileLayer
+          attribution='&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
+          url="https://tiles.stadiamaps.com/styles/alidade_smooth.json"
+          maxZoom={22}
+        /> */}
+        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+        <MapClickHandler />
+        <HomeButton />
+
+        {/* Marker Clustering with Custom Cluster Icons */}
+        <MarkerClusterGroup
+          showCoverageOnHover={true}
+          maxClusterRadius={50}
+          spiderfyDistanceMultiplier={2.5}  // Increase spacing when expanded
+          disableClusteringAtZoom={15} // Uncluster markers at close zoom
+          spiderLegPolylineOptions={{ weight: 1.5, color: "#007bff", opacity: 0.6 }} // Style spider lines
+          iconCreateFunction={createClusterIcon} // Apply the custom cluster styling
+        >
+          {markers}
+        </MarkerClusterGroup>
+      </MapContainer>
+    </div>
+    </ThemeProvider>
 );
 }
 

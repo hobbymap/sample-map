@@ -59,3 +59,7 @@ code {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   padding: 10px;
 }
+
+/* body, h6, div {
+  font-family: "Press Start 2P", cursive !important;
+} */
