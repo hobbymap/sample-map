@@ -29,14 +29,6 @@ export default function TimeSlider({ setSelectedYearFunc, selectedYear }: Slider
                 zIndex: 1000,
                 boxShadow: "0px 4px 12px rgba(0,0,0,0.25)",
                 margin: "12px",
-
-                // "@media (orientation: landscape)": {
-                //     top: "90px",
-                // },
-                // "@media (orientation: landscape) and (max-width: 768px)": {
-                //     top: "90px",
-                //     width: "85%",
-                // },
             }}
         >
             {/* Year Selection Slider */}
@@ -47,8 +39,8 @@ export default function TimeSlider({ setSelectedYearFunc, selectedYear }: Slider
                         fontWeight: "bold",
                         fontSize: "1.2rem",
                         textAlign: "center",
-                        letterSpacing: "1px", // Slight spacing for a classic look
-                        textTransform: "uppercase", // Adds to the retro feel
+                        letterSpacing: "1px",
+                        textTransform: "uppercase",
                     }}
                 >
                     Select Console Year
