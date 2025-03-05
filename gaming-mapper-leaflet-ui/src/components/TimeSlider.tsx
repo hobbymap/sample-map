@@ -22,7 +22,7 @@ export default function TimeSlider({ setSelectedYearFunc, selectedYear }: Slider
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                width: "400px",
+                width: "75%",
                 backgroundColor: "rgba(255, 255, 255, 0.95)",
                 padding: "5px",
                 borderRadius: "10px",
