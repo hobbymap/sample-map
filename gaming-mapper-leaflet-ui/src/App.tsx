@@ -140,7 +140,7 @@ return (
           <HomeButton />
 
           {/* Filter Component with Autocomplete functionality */}
-          <MapSearch gameData={gameData} />
+          { gameData ? <MapSearch gameData={gameData} /> : <></> }
 
           {/* Marker Clustering with Custom Cluster Icons */}
           <MarkerClusterGroup
