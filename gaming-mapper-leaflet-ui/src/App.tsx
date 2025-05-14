@@ -24,6 +24,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme"; // Import the custom theme
 import CssBaseline from "@mui/material/CssBaseline"; // Normalizes styles
 import MapSearch from "./components/MapSearch";
+import MapLibreTileLayer from "./MapLibreTileLayer";
 
 
 export default function App() {
@@ -130,12 +131,12 @@ return (
         style={{ height: "100%", width: "100%" }}
         >
           {/* This works, but need API when deploying */}
-          {/* <MapLibreTileLayer
+          <MapLibreTileLayer
             attribution='&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
             url="https://tiles.stadiamaps.com/styles/alidade_smooth.json"
             maxZoom={22}
-          /> */}
-          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+          />
+          {/* <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" /> */}
           <MapClickHandler />
           <HomeButton />
 
