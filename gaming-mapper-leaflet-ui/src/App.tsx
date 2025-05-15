@@ -10,7 +10,12 @@ import { FeatureCollection } from "geojson";
 // import MapLibreTileLayer from "./MapLibreTileLayer";
 import React from "react";
 import MemoizedMarker from "./components/MemoizedMarker";
-import { Dialog, DialogTitle, DialogContent, Typography, IconButton } from "@mui/material";
+import {
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  Typography
+} from "@mui/material";
 import HomeButton from "./components/HomeButton"
 import GamerIcon from "./components/GamerIcon";
 import TimeSlider from "./components/TimeSlider";
@@ -18,6 +23,7 @@ import TimeSlider from "./components/TimeSlider";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme"; // Import the custom theme
 import CssBaseline from "@mui/material/CssBaseline"; // Normalizes styles
+import MapSearch from "./components/MapSearch";
 
 
 export default function App() {
@@ -94,7 +100,7 @@ const markers = React.useMemo(() => {
 return (
   <ThemeProvider theme={theme}>
       <CssBaseline /> 
-    <div id="map-container" style={{ height: "100vh", width: "100%", position: "relative" }}>
+      <div id="map-container" style={{ height: "100vh", width: "100%", position: "relative" }}>
 
       <GamerIcon onClickFunc={setAboutOpen}/>
 
@@ -116,30 +122,38 @@ return (
           </Typography>
         </DialogContent>
       </Dialog>
-
-      <MapContainer center={[40.67, -96.59]} maxZoom={22} zoom={3} style={{ height: "100%", width: "100%" }}>
-        {/* This works, but need API when deploying */}
-        {/* <MapLibreTileLayer
-          attribution='&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
-          url="https://tiles.stadiamaps.com/styles/alidade_smooth.json"
-          maxZoom={22}
-        /> */}
-        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-        <MapClickHandler />
-        <HomeButton />
-
-        {/* Marker Clustering with Custom Cluster Icons */}
-        <MarkerClusterGroup
-          showCoverageOnHover={true}
-          maxClusterRadius={50}
-          spiderfyDistanceMultiplier={2.5}  // Increase spacing when expanded
-          disableClusteringAtZoom={15} // Uncluster markers at close zoom
-          spiderLegPolylineOptions={{ weight: 1.5, color: "#007bff", opacity: 0.6 }} // Style spider lines
-          iconCreateFunction={createClusterIcon} // Apply the custom cluster styling
+      
+        <MapContainer
+        center={[40.67, -96.59]} 
+        maxZoom={22} 
+        zoom={3} 
+        style={{ height: "100%", width: "100%" }}
         >
-          {markers}
-        </MarkerClusterGroup>
-      </MapContainer>
+          {/* This works, but need API when deploying */}
+          {/* <MapLibreTileLayer
+            attribution='&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
+            url="https://tiles.stadiamaps.com/styles/alidade_smooth.json"
+            maxZoom={22}
+          /> */}
+          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+          <MapClickHandler />
+          <HomeButton />
+
+          {/* Filter Component with Autocomplete functionality */}
+          { gameData ? <MapSearch gameData={gameData} /> : <></> }
+
+          {/* Marker Clustering with Custom Cluster Icons */}
+          <MarkerClusterGroup
+            showCoverageOnHover={true}
+            maxClusterRadius={50}
+            spiderfyDistanceMultiplier={2.5}  // Increase spacing when expanded
+            disableClusteringAtZoom={15} // Uncluster markers at close zoom
+            spiderLegPolylineOptions={{ weight: 1.5, color: "#007bff", opacity: 0.6 }} // Style spider lines
+            iconCreateFunction={createClusterIcon} // Apply the custom cluster styling
+          >
+            {markers}
+          </MarkerClusterGroup>
+        </MapContainer>
     </div>
     </ThemeProvider>
 );
